@@ -1,0 +1,5 @@
+mkdir /squashfs
+mkdir /target
+mount -t squashfs $1 /squashfs
+cp -av /squashfs/. /target
+umount /squashfs
