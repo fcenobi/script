@@ -6,6 +6,6 @@ sudo apt-get install -f
 sudo systemctl enable vncserver-x11-serviced.service
 sudo systemctl start vncserver-x11-serviced.service
 echo LXSX5-JRR6E-LSK7H-SE36N-EUVKA >> ~/vncserverlicenza.txt
-vnclicense -add LXSX5-JRR6E-LSK7H-SE36N-EUVKA
+sudo vnclicense -add LXSX5-JRR6E-LSK7H-SE36N-EUVKA
 
 
