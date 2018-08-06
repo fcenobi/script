@@ -1,0 +1,14 @@
+alias n1='netstat -lntu'
+alias n2='netstat -lnptu'
+alias n3='netstat -tuwanp 2>/dev/null | awk '{print $4}' | sort | uniq -c | wc -l'
+alias n4='netstat -lnt | awk 'NR>2{print $4}' | grep -E '0.0.0.0:' | sed 's/.*://' | sort -n | uniq'
+alias n5='netstat -lnt | awk 'NR>2{print $4}' | grep -E ':::' | sed 's/.*://' | sort -n | uniq'
+alias n6='netstat -lnt | awk 'NR>2{print $4}' | grep -E '(0.0.0.0:|:::)' | sed 's/.*://' | sort -n | uniq'
+alias n7='netstat -lnt | awk 'NR>2{print $4}' | grep -E '(127.0.0.1:|::1:)' | sed 's/.*://' | sort -n | uniq'
+export n1
+export n2
+export n3
+export n4
+export n5
+export n6
+export n7
