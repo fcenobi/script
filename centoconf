@@ -1,0 +1,151 @@
+##PERFORM SYSTEM UPDATES
+yum update -y
+reboot
+
+##CONFIGURE BASH PROMPT
+echo ‘PS1=”[\\t][\[\033[0;31m\]\\u\[\033[0m\]@\[\033[0;33m\]\\h\[\033[0m\]]\\w\\$ “‘ >> /root/.bashrc
+
+##INSTALL GENERIC SYSTEM COMPONENTS
+yum install ntp* cron* sudo fail2ban iptables mlocate zip unzip tar vim make gcc kernel-headers kernel-devel sendmail sendmail-cf procmail mailx mutt rsync epel-release wget patch openssl-devel openssl libxml2 libxml2-devel libxslt libxslt-devel vsftpd gd ImageMagick build-essential libmhash-devel libmhash yum-plugin-replace yum-utils iptables iptables-services -y
+
+##DISABLE FIREWALLD AND ENABLE IPTABLES
+systemctl disable firewalld
+systemctl mask firewalld
+systemctl enable iptables
+
+##ENABLE NEW SERVICES
+service sendmail start
+service vsftpd start
+chkconfig sendmail on
+chkconfig vsftpd on
+
+##INSTALL WEBMIN
+echo ‘[Webmin]’ > /etc/yum.repos.d/webmin.repo
+echo ‘name=Webmin Distribution Neutral’ >> /etc/yum.repos.d/webmin.repo
+echo ‘#baseurl=http://download.webmin.com/download/yum’ >> /etc/yum.repos.d/webmin.repo
+echo ‘mirrorlist=http://download.webmin.com/download/yum/mirrorlist’ >> /etc/yum.repos.d/webmin.repo
+echo ‘enabled=1’ >> /etc/yum.repos.d/webmin.repo
+cd /tmp
+wget http://www.webmin.com/jcameron-key.asc
+rpm –import jcameron-key.asc
+yum install webmin -y
+service webmin start
+chkconfig webmin on
+
+##INSTALL WEB COMPONENTS
+yum install php php-devel php-gd php-imap php-ldap php-mysql php-odbc php-pear php-xml php-xmlrpc php-mbstring php-mcrypt php-mhash php-mssql php-snmp php-soap php-tidy curl curl-devel perl-libwww-perl ImageMagick libxml2 libxml2-devel mod_fcgid php-cli httpd-devel mariadb mariadb-devel mariadb-server bzip2 gcc libxml2-devel bzip2-devel zlib-devel curl-devel libmcrypt-devel libjpeg-devel libpng-devel gd-devel phpMyAdmin mod_ssl -y
+
+##ENABLE APACHE SERVICE
+service httpd start
+service mariadb start
+chkconfig httpd on
+chkconfig mariadb on
+
+##CONFIGURE MYSQL SERVER
+mysql_secure_installation
+
+##INSTALL REMI REPO
+cd /tmp
+wget http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
+rpm -Uvh remi-release-7*.rpm
+
+##INSTALL ADDITIONAL VERSIONS OF PHP
+yum install php70-php php70-php-fpm php70-php-devel php70-php-gd php70-php-imap php70-php-ldap php70-php-mysql php70-php-odbc php70-php-pear php70-php-xml php70-php-xmlrpc php70-php-eaccelerator php70-php-mbstring php70-php-mcrypt php70-php-mhash php70-php-mssql php70-php-snmp php70-php-soap php70-php-tidy php56-php php56-php-devel php56-php-gd php56-php-imap php56-php-ldap php56-php-mysql php56-php-odbc php56-php-pear php56-php-xml php56-php-xmlrpc php56-php-eaccelerator php56-php-mbstring php56-php-mcrypt php56-php-mhash php56-php-mssql php56-php-snmp php56-php-soap php56-php-tidy
+
+##CONFIGURE PHP 5.2 FOR NEEDLOCK SUPPORT
+cd /tmp
+wget http://museum.php.net/php5/php-5.2.17.tar.gz
+tar zxvf php-5.2.17.tar.gz
+cd /tmp/php-5.2.17
+curl -o php-5.2.17.patch https://mail.gnome.org/archives/xml/2012-August/txtbgxGXAvz4N.txt
+patch -p0 -b < php-5.2.17.patch
+./configure –prefix=/usr/local/php52 –with-config-file-path=/etc/php52 –with-config-file-scan-dir=/etc/php52/php.d –with-libdir=lib64 –with-mysql –with-mysqli –enable-fastcgi –enable-force-cgi-redirect –enable-mbstring –disable-debug –disable-rpath –with-bz2 –with-curl –with-gettext –with-iconv –with-openssl –with-gd –with-mcrypt –with-pcre-regex
+make
+make install
+cp php.ini-dist /usr/local/php52/lib/php.ini
+echo ‘#!/bin/sh’ > /var/www/cgi-bin/fastcgi.php5.2.sh
+echo ‘PHPRC=/usr/local/lib/’ >> /var/www/cgi-bin/fastcgi.php5.2.sh
+echo ‘export PHPRC’ >> /var/www/cgi-bin/fastcgi.php5.2.sh
+echo ‘export PHP_FCGI_MAX_REQUESTS=5000’ >> /var/www/cgi-bin/fastcgi.php5.2.sh
+echo ‘export PHP_FCGI_CHILDREN=8’ >> /var/www/cgi-bin/fastcgi.php5.2.sh
+echo ‘exec /usr/local/php52/bin/php-cgi’ >> /var/www/cgi-bin/fastcgi.php5.2.sh
+chmod +x /var/www/cgi-bin/fastcgi.php5.2.sh
+chown apache:apache /var/www/cgi-bin/fastcgi.php5.2.sh
+
+##CREATE FOLDER STRUCTURE
+mkdir /var/www/html/DIRECTORY
+mkdir /var/www/html/DIRECTORY/OLD FOLDER
+
+##CONFIGURE FAST CGI EXECUTION
+echo ‘‘ >> /etc/httpd/conf.d/fcgid.conf
+echo ‘# PHP 5.3’ >> /etc/httpd/conf.d/fcgid.conf
+echo ‘Action application/x-httpd-php52 /cgi-bin/fastcgi.php5.2.sh’ >> /etc/httpd/conf.d/fcgid.conf
+echo ‘AddType application/x-httpd-php52 .php52’ >> /etc/httpd/conf.d/fcgid.conf
+echo ‘‘ >> /etc/httpd/conf.d/fcgid.conf
+##CONFIGURE VIRTUAL HOSTS
+echo ‘‘ > /etc/httpd/conf.d/virtualhosts.conf
+echo ‘ServerAdmin *EMAIL ADDRESS*’ >> /etc/httpd/conf.d/virtualhosts.conf
+echo ‘DocumentRoot /var/www/html/*DIRECTORY*/’ >> /etc/httpd/conf.d/virtualhosts.conf
+echo ‘ServerName *VIRTUAL HOST NAME*’ >> /etc/httpd/conf.d/virtualhosts.conf
+echo ‘‘ >> /etc/httpd/conf.d/virtualhosts.conf
+echo ‘AllowOverride All’ >> /etc/httpd/conf.d/virtualhosts.conf
+echo ‘Options +FollowSymLinks’ >> /etc/httpd/conf.d/virtualhosts.conf
+echo ‘Order allow,deny’ >> /etc/httpd/conf.d/virtualhosts.conf
+echo ‘Allow from all’ >> /etc/httpd/conf.d/virtualhosts.conf
+echo ‘‘ >> /etc/httpd/conf.d/virtualhosts.conf
+echo ‘‘ >> /etc/httpd/conf.d/virtualhosts.conf
+echo ‘Options +FollowSymLinks +ExecCGI’ >> /etc/httpd/conf.d/virtualhosts.conf
+echo ‘AllowOverride All’ >> /etc/httpd/conf.d/virtualhosts.conf
+echo ‘Order allow,deny’ >> /etc/httpd/conf.d/virtualhosts.conf
+echo ‘Allow from all’ >> /etc/httpd/conf.d/virtualhosts.conf
+echo ‘‘ >> /etc/httpd/conf.d/virtualhosts.conf
+echo ‘‘ >> /etc/httpd/conf.d/virtualhosts.conf
+echo ‘SetHandler application/x-httpd-php52’ >> /etc/httpd/conf.d/virtualhosts.conf
+echo ‘‘ >> /etc/httpd/conf.d/virtualhosts.conf
+echo ‘‘ >> /etc/httpd/conf.d/virtualhosts.conf
+echo ‘‘ >> /etc/httpd/conf.d/virtualhosts.conf
+echo ‘‘ >> /etc/httpd/conf.d/virtualhosts.conf
+
+##CREATE TEST FILES
+echo ‘‘ /var/www/html/*DIRECTORY*/phpinfo.php
+echo ‘‘ /var/www/html/*DIRECTORY*/*OLD APPLICATION*/phpinfo.php
+
+##CONFIGURE phpMyAdmin
+comment out Require IP *
+add Require all granted
+
+##CONFIGURE SERVICES
+Configure fail2ban, sendmail, and iptables via webmin
+
+##CONFIGURE LOGIN BANNER
+echo ‘
+************************** W A R N I N G ***********************
+server privato 
+****************************************************************’ > /etc/banner
+echo ‘Banner /etc/banner’ >> /etc/ssh/sshd_config
+service sshd restart
+
+#ENABLE SSL Certificates for Apache
+yum -y install yum-utils
+yum-config-manager –enable rhui-REGION-rhel-server-extras rhui-REGION-rhel-server-optional
+yum install certbot-apache
+certbot –apache
+
+#Install Antivirus
+yum install clamav-server clamav-data clamav-update clamav-filesystem clamav clamav-scanner-systemd clamav-devel clamav-lib clamav-server-systemd
+Create a new file /usr/lib/systemd/system/clam-freshclam.service
+
+# Run the freshclam as daemon
+[Unit]
+Description = freshclam scanner
+After = network.target
+[Service]
+Type = forking
+ExecStart = /usr/bin/freshclam -d -c 4
+Restart = on-failure
+PrivateTmp = true
+[Install]
+WantedBy=multi-user.target
+systemctl enable clam-freshclam.service
+systemctl start clam-freshclam.service
+
