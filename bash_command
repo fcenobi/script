@@ -1,0 +1,852 @@
+bash commands
+Just about all the commands available with my 10.4 Mac’s bash.
+(The ones with “—” seem to be from the BSD manual.)
+
+a2p – Awk to Perl translator
+ab – Apache HTTP server benchmarking tool
+ac — display connect time accounting
+accept/reject – accept/reject jobs sent to a destination
+accton — enable/disable system accounting
+acid – TT6E instruction trace analyzer; version 2.7
+aclocal – manual page for aclocal 1.12.2
+addftinfo – add information to troff font files for use with groff
+afmtodit – create font files for use with groff -Tps
+amber — creates TT6, TT6E and FULL instruction traces
+amlint — check Automator actions for problems
+ant – a Java based make tool.
+apachectl – Apache HTTP server control interface
+AppleFileServer — Apple File Protocol server.
+appleping – exercises the AppleTalk network by sending packets to a named host
+appletalk – enables you to configure and display AppleTalk network interfaces
+appletviewer – Java applet viewer
+apply — apply a command to a set of arguments
+apropos – search the whatis database for strings
+apxs – APache eXtenSion tool
+ar — create and maintain library archives
+arch — print architecture type
+arp — address resolution display and control
+as – Mac OS X Mach-O GNU-based assemblers
+asa — interpret carriage-control characters.
+asr — Apple Software Restore; copy volumes (e.g. from disk images)
+at_cho_prn – allows you to choose a default printer on the AppleTalk internet
+at, batch, atq, atrm — queue, examine, or delete jobs for later execution
+atlookup – looks up network-visible entities (NVEs) registered on the AppleTalk network system
+atos – tool to convert numeric addresses to symbols of binary images or processes
+atprint – transfer data to a printer using AppleTalk protocols
+atstatus – displays status information from an AppleTalk device
+autoconf – Generate configuration scripts
+autodiskmount — disk support tool
+autoheader – Create a template header for configure
+autom4te – Generate files and scripts thanks to M4
+automake – manual page for automake 1.12.2
+automator — runs an Automator workflow
+automount — automatic server mount / unmount daemon
+autoreconf – Update generated configuration files
+autoscan – Generate a preliminary configure.in
+autoupdate – Update a configure.in to a newer Autoconf
+awk – pattern-directed scanning and processing language
+banner — print large banner on printer
+basename, dirname — return filename or directory portion of pathname
+bash – GNU Bourne-Again SHell
+bashbug – report a bug in bash
+bc – An arbitrary precision calculator language
+biff — be notified if mail arrives and who it is from
+bind — bind a name to a socket
+bison – GNU Project parser generator (yacc replacement)
+bless — set volume bootability and startup disk options
+blued — The Mac OS X bluetooth daemon.
+bootparamd — boot parameter server
+bpwhoami — print the output of a bootparams whoami call
+brew – The missing package manager for OS X
+bsdmake — maintain program dependencies
+bspatch — apply a patch built with bsdiff(1)
+bzcat – decompresses files to stdout
+bzip2, bunzip2 – a block-sorting file compressor, v1.0.4
+bzmore, bzless – file perusal filter for crt viewing of bzip2 compressed text
+c++filt – Demangle C++ and Java symbols.
+c2ph, pstruct – Dump C structures as generated from “cc -g -S” stabs
+c89 — standard C language compiler
+c99 — standard C language compiler
+cal — displays a calendar
+calendar — reminder service
+cancel – cancel jobs
+cap_mkdb — create capability database
+captoinfo – convert a termcap description into a terminfo description
+cat — concatenate and print files
+certtool – create key pairs, certificates and certificate signing requests for use with Keychains
+chat – Automated conversational script with a modem
+checkgid — validate group identifiers
+checknr — check nroff/troff files
+chflags — change file flags
+chgrp — change group
+chmod — change file modes or Access Control Lists
+chown — change file owner and group
+chpass, chfn, chsh, — add or change user database information
+chroot — change root directory
+chudRemoteCtrl – start or stop the collection of performance monitor data in a performance monitor remote server application.
+chumAddRights, — Adds defaults authorization rights used by chum.
+ci – check in RCS revisions
+cksum, sum — display file checksums and block counts
+clear – clear the terminal screen
+clri — clear an inode
+cmp – compare two files byte by byte
+cmpdylib – compare two dynamic shared libraries for compatibility
+co – check out RCS revisions
+col — filter reverse line feeds from input
+colcrt — filter nroff output for CRT previewing
+colldef — convert collation sequence source definition
+colrm — remove columns from a file
+column — columnate lists
+comm — select or reject lines common to two files
+compile_et – tool for generating com_err error tables
+compileHelp — command-line utility to merge contextual help rtf snippets into one resource
+compress, uncompress — compress and expand data
+config – OpenSSL CONF library configuration files
+configd — System Configuration Daemon
+coreaudiod – a mach_init.d daemon used for CoreAudio related purposes. This daemon hosts the SystemSoundServer and is used as the Master process for HAL device management.
+corelist – a commandline frontend to Module::CoreList
+cp — copy files
+cpan – easily interact with CPAN from the command line
+cpio — copy file archives in and out
+cpp – The C Preprocessor
+createhomedir — create and populate home directories on the local computer.
+crlrefresh – update and maintain system-wide CRL cache
+cron — daemon to execute scheduled commands (Vixie Cron)
+crontab — maintain crontab files for individual users (V3)
+cscope – interactively examine a C program
+csplit — split files based on context
+ctags — create a tags file
+cups-calibrate – ESP CUPS Printer Calibration Tool
+cups-config – get cups api, compiler, directory, and link information.
+cupsaddsmb – export printers to samba for windows clients
+cupsd – common unix printing system daemon
+cupstestppd – test conformance of ppd files
+curl – transfer a URL
+curl-config – Get information about a libcurl installation
+cut — select portions of each line of a file
+cvs – Concurrent Versions System
+cvsbug – send problem report (PR) about CVS to a central support site
+date — display or set date and time
+dbmmanage – Create and update user authentication files in DBM format
+dc – an arbitrary precision calculator
+dd — convert and copy a file
+defaults — access the Mac OS X user defaults system
+desdp — scripting definition generator
+dev_mkdb — create /dev database
+df — display free disk space
+diagnostics, splain – produce verbose warning diagnostics
+diff – compare files line by line
+diff3 – compare three files line by line
+diffpp – pretty-print diff outputs with GNU enscript
+diffstat – make histogram from diff-output
+dig – DNS lookup utility
+DirectoryService — DirectoryService daemon (a part of Mac OS X’s Open Directory architecture)
+dirt — A Directory Tool for testing Directory Services
+disable, enable – stop/start printers and classes
+diskarbitrationd — disk arbitration daemon
+disklabel — manipulate and query an Apple Label disk label
+disktool — disk support tool
+diskutil — Modify, verify and repair local disks.
+distcc – distributed C/C++/ObjC compiler
+distccd – distributed C/C++ compiler server
+distccmon-text – Displays current compilation jobs in text form.
+distnoted — distributed notification server
+ditto — copy files and directories to a destination directory
+dmesg — display the system message buffer
+dns-sd — Multicast DNS (mDNS) & DNS Service Discovery (DNS-SD) Test Tool
+dnsextd — BIND Extension Daemon
+dnssec-keygen – DNSSEC key generation tool
+dnssec-makekeyset – DNSSEC zone signing tool
+dnssec-signkey – DNSSEC key set signing tool
+dnssec-signzone – DNSSEC zone signing tool
+domainname — set or print the name of the current NIS domain
+dprofpp – display perl profile data
+drutil — interact with CD/DVD burners
+dscl — Directory Service command line utility
+dsconfigad — retrieves/changes configuration for Directory Services Active Directory Plugin.
+dsconfigldap — LDAP server config/binding add/remove tool.
+dseditgroup — group record manipulation tool.
+dsenableroot — enables or disables the root account.
+dsperfmonitor — A Directory Tool for monitoring plugin performance in Directory Services
+dsymutil — manipulate archived DWARF debug symbol files.
+du — display disk usage statistics
+dump — filesystem backup
+dumpfs — dump file system information
+dwarfdump — dump DWARF debug information.
+dynamic_pager — dynamic pager external storage manager
+echo — write arguments to the standard output
+ed – text editor
+edit – (TextWrangler) Whip some ASCII.
+edquota — edit user quotas
+efax – send/receive faxes with Class 1, 2 or 2.0 fax modem
+efix – convert between fax, text, bit-map and gray-scale formats
+emacs – GNU project Emacs
+enc2xs — Perl Encode Module Generator
+encguess – guess character encodings of files
+enscript – convert text files to PostScript, HTML, RTF, ANSI, and overstrikes
+env — set and print environment
+eqn – format equations for troff
+eqn2graph – convert an EQN equation into a cropped image
+error — analyze and disperse compiler error messages
+escputil – maintain Epson Stylus inkjet printers
+etags, ctags – generate tag file for Emacs, vi
+expand, unexpand — expand tabs to spaces, and vice versa
+expect – programmed dialogue with interactive programs, Version 5
+expr — evaluate expression
+extcheck – jar conflict detection utility
+false — Return false value.
+fax – make, send, receive, view or print a fax
+fdisk — DOS partition maintenance program
+fetchmail – fetch mail from a POP, IMAP, ETRN, or ODMR-capable server
+fibreconfig — Tool for configuring settings for Fibre Channel controllers and targets.
+file – determine file type
+find — walk a file hierarchy
+find2perl – translate find command lines to Perl code
+findsmb – list info about machines that respond to SMB name queries on a subnet
+finger — user information lookup program
+flex – fast lexical analyzer generator
+fmt — simple text formatter
+fold — fold long lines for finite width output device
+formail – mail (re)formatter
+from — print names of those who have sent mail
+fs_usage — report system calls and page faults related to filesystem activity in real-time
+fsck — filesystem consistency check and interactive repair
+fsck_hfs — HFS file system consistency check
+fsck_msdos — DOS/Windows (FAT) file system consistency check
+ftp — Internet file transfer program
+full2tt6e — convert amber .full to .tt6e trace format
+fulldump — display the contents of an amber .full trace
+funzip – filter for extracting from a ZIP archive in a pipe
+gatherheaderdoc — header documentation processor
+gcc – GNU project C and C++ compiler
+gcc_select — Switch the default system compiler
+gcov – coverage testing tool
+gdb – The GNU Debugger
+gencat — NLS catalog compiler
+genstrings — generate string table from source code
+getconf — retrieve standard configuration variables
+getopt — parse command options
+glibtool — generic library support script
+gnuserv, gnuclient – Server and Clients for Emacs
+gperf – generate a perfect hash function from a key set
+gprof – display call graph profile data
+gpt — GUID partition table maintenance utility
+grap2graph – convert a grap diagram into a cropped bitmap image
+grep, egrep, fgrep – print lines matching a pattern
+grn – groff preprocessor for gremlin files
+grodvi – convert groff output to TeX dvi format
+groff – front-end for the groff document formatting system
+groffer – display groff files and man pages on X and tty
+grog – guess options for groff command
+grohtml – html driver for groff
+grolbp – groff driver for Canon CAPSL printers (LBP-4 and LBP-8 series laser printers).
+grolj4 – groff driver for HP Laserjet 4 family
+grops – PostScript driver for groff
+grotty – groff driver for typewriter-like devices
+groups — show group memberships
+gzexe – compress executable files in place
+gzip, gunzip, zcat – compress or expand files
+h2ph – convert .h C header files to .ph Perl header files
+h2xs – convert .h C header files to Perl extensions
+hdid – HDI driver backing store service
+hdik — lightweight in-kernel disk image mounting tool.
+hdiutil — manipulate disk images (attach, verify, burn, etc)
+hdxml2manxml — HeaderDoc XML to MPGL translator
+head — display first lines of a file
+headerdoc2html — header documentation processor
+heap — List all the malloc-allocated buffers in the process’s heap
+hexdump, hd — ASCII, decimal, hexadecimal, octal dump
+host – DNS lookup utility
+hostinfo — host information
+hostname — set or print name of current host system
+hpftodit – create font description files for use with groff -Tlj4
+htdigest – Create and update user authentication files
+htpasswd – Create and update user authentication files
+httpd – Apache hypertext transfer protocol server
+hwprefs — inspect and control low-level system and processor parameters
+iconv – character set conversion
+id — return user identity
+ident – identify RCS keyword strings in files
+idlj – IDL-to-Java compiler
+ifconfig — configure network interface parameters
+ifnames – Extract CPP conditionals from a set of files
+indent — indent and format C program source
+indxbib – make inverted index for bibliographic databases
+info – read Info documents
+infocmp – compare or print out terminfo descriptions
+infokey – compile customizations for Info
+infotocap – convert a terminfo description into a termcap description
+install — install binaries
+install_name_tool – change dynamic shared library install names
+install-info – update info/dir entries
+installer — system software and package installer tool.
+instmodsh – A shell to examine installed modules
+ioalloccount — Summarize IOKit memory usage.
+iodbc-config – script to get information about the installed version of iODBC
+iodbctest, iodbctestw – iODBC Demonstration programs
+ioreg — show I/O Kit registry
+iostat — report I/O statistics
+ip6 — Enable or disable IPv6 on active interfaces
+ip6config — Configure IPv6 and 6to4 IPv6 tunnelling
+ip6fw — controlling utility for IPv6 firewall
+ipconfig — view and control IP configuration state
+ipcrm — remove the specified message queues, semaphore sets, and shared memory segments
+ipcs — report System V interprocess communication facilities status
+ipfw — IP firewall and traffic shaper control program
+jar – Java archive tool
+jarsigner – JAR signing and verification tool
+java – Java interpreter
+javac – Java compiler
+javaconfig — get Java configuration information
+javadoc – Java API documentation generator
+javah – C header and stub file generator
+javap – Java class file disassembler
+javatool — tool used in building older Java software projects
+javaws – Java Web Start command launcher
+jdb – Java debugger
+jikes – java source to bytecode compiler
+join — relational database operator
+jot — print sequential or random data
+json_pp – JSON::PP command utility
+kadmin – Kerberos V5 database administration program
+kadmind – KADM5 administration server
+kdb5_util – Kerberos database maintainance utility
+kdestroy – destroy Kerberos tickets
+kdump — display kernel trace data
+kerberosautoconfig — Kerberos — Open Directory Single Sign On
+kextcache — creates or updates kext caches
+kextload — loads, validates, and generates symbols for a kernel extension (kext)
+kextstat — display status of dynamically loaded kernel extensions
+kextunload — terminates and unloads kernel extensions
+keytool – key and certificate management tool
+kgmon — generate a dump of the operating system’s profile buffers
+kill — terminate or signal a process
+killall — kill processes by name
+kinit – obtain and cache Kerberos ticket-granting ticket
+klist – list cached Kerberos tickets
+kpasswd – change a user’s Kerberos password
+kprop – propagate a Kerberos V5 principal database to a slave server
+kpropd – Kerberos V5 slave KDC update server
+krb5-config – tool for linking against MIT Kerberos libraries
+krb524d – Version 5 to Version 4 Credentials Conversion Daemon
+krb5kdc – Kerberos V5 KDC
+ksh, rksh, pfksh – KornShell, a standard/restricted command and programming language
+kswitch – set the Kerberos system default credentials cache
+ktrace — enable kernel process tracing
+ktutil – Kerberos keytab file maintenance utility
+kvno – print key version numbers of Kerberos principals
+lam — laminate files
+languagesetup — set the primary language. (3622974 – more to come)
+last — indicate last logins of users and ttys
+lastcomm — show last commands executed in reverse order
+latency — monitors scheduling and interrupt latency
+launchctl — Interfaces with launchd
+launchd — System wide and per-user daemon/agent manager
+launchd_debugd — Simple HTTP server to display job data
+ld – Mach object file link editor
+ldapcompare – LDAP compare tool
+ldapdelete – LDAP delete entry tool
+ldapmodify, ldapadd – LDAP modify entry and LDAP add entry tools
+ldapmodrdn – LDAP rename entry tool
+ldappasswd – change the password of an LDAP entry
+ldapsearch – LDAP search tool
+ldapwhoami – LDAP who am i? tool
+leaks — Search a process’s memory for unreferenced malloc buffers
+leave — remind you when you have to leave
+less – opposite of more
+lessecho – expand metacharacters, such as * and ?, in filenames on Unix systems.
+lesskey – specify key bindings for less
+libnetcfg – configure libnet
+libtool – create libraries
+lipo – create or operate on universal files
+lkbib – search bibliographic databases
+ln, link — make links
+local – Postfix local mail delivery
+locale — display locale settings
+localedef — define locale environment
+locate — find filenames quickly
+lock — reserve a terminal
+lockfile – conditional semaphore-file creator
+logger — make entries in the system log
+login — log into the computer
+logname — display user’s login name
+logresolve – resolve hostnames for IP-adresses in Apache logfiles
+look — display lines beginning with a given string
+lookbib – search bibliographic databases
+lookupd — directory information and cache daemon
+lorder — list dependencies for object files
+lp – print files
+lpadmin – configure cups printers and classes
+lpc – line printer control program
+lpinfo – show available devices or drivers
+lpmove – move a job to a new destination
+lpoptions – display or set printer options and defaults
+lppasswd – add, change, or delete digest passwords.
+lpq – show printer queue status
+lpr – print files
+lprm – cancel print jobs
+lpstat – print cups status information
+ls — list directory contents
+lsbom — list contents of a bom file
+lsof – list open files
+lsvfs — list known virtual file systems
+lwresd – lightweight resolver daemon
+m4 – macro processor
+machine — print machine type
+mail, mailx — send and receive mail
+mailstat – shows mail-arrival statistics
+make – GNU make utility to maintain groups of programs
+makedbm — create a YP database
+makeinfo – translate Texinfo documents
+malloc_history — Show the malloc allocations that the process has performed
+man – format and display the on-line manual pages
+md — process raw dependency files produced by cpp -MD
+md5 — calculate a message-digest fingerprint (checksum) for a file
+mdcheckschema — simple mdimporter schema validation tool
+mdfind — finds files matching a given query
+mdimport — import file hierarchies into the metadata datastore.
+mdls — lists the metadata attributes for the specified file
+mDNS — Multicast DNS (mDNS) & DNS Service Discovery (DNS-SD) Test Tool
+mDNSResponder — Multicast DNS daemon
+mdutil — manage the metadata stores used by Spotlight
+megaraid — Command Line Utility for MegaRAID management.
+memberd — group membership resolution daemon
+merge – three-way file merge
+mesg — display (do not display) messages from other users
+mib2c — generate template code for extending the agent
+mkafmmap – creates font map for AFM files
+mkbom — create a bill-of-materials file
+mkdep — construct Makefile dependency list
+mkdir — make directories
+mkextunpack — extracts the contents of a multikext (mkext) archive
+mkfifo — make fifos
+mkfile – create a file
+mklocale — make LC_CTYPE locale files
+mknod — make device special file
+mkslapdconf – generate a configuration file for the LDAP server
+mktemp — make temporary file name (unique)
+mmroff – reference preprocessor
+mnthome — mount an AFP (AppleShare) home directory with the correct privileges
+mount — mount file systems
+mountd — service remote NFS mount requests
+msgs — system messages and junk mail program
+mtree — map a directory hierarchy
+mv — move files
+mvn – Maven – a Java based project management and comprehension tool.
+named – Internet domain name server
+named-checkconf – named configuration file syntax checking tool
+named-checkzone – zone file validity checking tool
+nano – Nano’s ANOther editor, an enhanced free Pico clone
+nasm – the Netwide Assembler, a portable 80×86 assembler
+natd — Network Address Translation daemon
+native2ascii – native to ASCII converter
+nbdst — NetBoot deferred shadow tool
+nc (netcat) — use network sockets from the command line
+ndisasm – the Netwide Disassembler, an 80×86 binary file disassembler
+ndp — control/diagnose IPv6 neighbor discovery protocol
+neqn – format equations for ascii output
+net – Tool for administration of Samba and remote CIFS servers.
+netinfod – NetInfo daemon
+netstat — show network status
+newfs — construct a new file system
+newfs_hfs — construct a new HFS Plus file system
+newfs_msdos — construct a new MS-DOS (FAT) file system
+nfsd — remote NFS server
+nfsiod — local NFS asynchronous I/O server
+nfsstat — display NFS statistics
+nibindd – NetInfo binder
+nibtool – prints, verifies, and updates nib files.
+nice — execute a utility with an altered scheduling priority
+nicl — NetInfo command line utility
+nidomain – NetInfo domain utility
+nidump – extract text or flat-file-format data from NetInfo
+nifind – find a directory in the NetInfo hierarchy
+nigrep – search for a regular expression in the NetInfo hierarchy
+niload – load text or flat-file-format data into NetInfo
+nireport – print tables from the NetInfo hierarchy
+niutil – NetInfo utility
+nl — line numbering filter
+nm – display name list (symbol table)
+nmbd – NetBIOS name server to provide NetBIOS over IP naming services to clients
+nmblookup – NetBIOS over TCP/IP client used to lookup NetBIOS names
+nmedit – change global symbols to local symbols
+nohup — invoke a command immune to hangups
+nologin — politely refuse a login
+notifyd — notification server
+nroff – emulate nroff command with groff
+nslookup – query Internet name servers interactively
+nsupdate – Dynamic DNS update utility
+ntlm_auth – tool to allow external access to Winbind’s NTLM authentication function
+ntpd — Network Time Protocol (NTP) daemon
+ntpdate — set the date and time via NTP
+ntpdc — special NTP query program
+ntpq — standard NTP query program
+ntptrace — trace a chain of NTP servers back to the primary source
+nvram – manipulate firmware NVRAM variables
+ocs – creates and maintains the database for cscope on a recursive directory set
+ocvs – Concurrent Versions System
+od — octal, decimal, hex, ASCII dump
+open — open files and directories
+open-x11 — run X11 programs
+opendiff — Use FileMerge to graphically compare or merge file or directories
+openssl – OpenSSL command line tool
+openssl_fips_fingerprint – OpenSSL FIPS Fingerprint tool
+orbd – Object Request Broker Daemon
+osacompile — compile AppleScripts and other OSA language scripts
+osalang — information about installed OSA languages
+osascript — execute AppleScripts and other OSA language scripts
+otool – object file displaying tool
+over – pretty print and scroll source code on terminal
+pagesize — print system page size
+pagestuff – Mach-O file page analysis tool
+passwd — modify a user’s password
+paste — merge corresponding or subsequent lines of files
+patch – apply a diff file to an original
+pathchk — check pathnames
+pax — read and write file archives and copy directory hierarchies
+pbcopy, pbpaste – provide copying and pasting to the pasteboard (the Clipboard) from command line
+pcscd – PC/SC Smartcard Daemon
+pdbedit – manage the SAM database (Database of Samba Users)
+pdisk — Apple partition table editor
+periodic — run periodic system functions
+perl – The Perl 5 language interpreter
+perlbug – how to submit bug reports on Perl
+perlcc – generate executables from Perl programs
+perldoc – Look up Perl documentation in Pod format.
+perlivp – Perl Installation Verification Procedure
+pfbtops – translate a PostScript font in .pfb format to ASCII
+php – PHP Command Line Interface ‘CLI’
+php-config – get information about PHP configuration
+phpize – prepare a PHP extension for compiling
+pic – compile pictures for troff or TeX
+pic2graph – convert a PIC diagram into a cropped image
+piconv — iconv(1), reinvented in perl
+ping — send ICMP ECHO_REQUEST packets to network hosts
+ping6 — send ICMPv6 ECHO_REQUEST packets to network hosts
+pl — converts between ASCII and binary plist formats
+pl2pm – Rough tool to translate Perl4 .pl files to Perl5 .pm modules.
+plutil — property list utility
+pmap_dump — print a list of all registered RPC programs
+pmap_set — set the list of registered RPC programs
+pmset — manipulate power management settings
+pod2html – convert .pod files to .html files
+pod2latex – convert pod documentation to latex format
+pod2man – Convert POD data to formatted *roff input
+pod2text – Convert POD data to formatted ASCII text
+pod2usage – print usage messages from embedded pod docs in files
+podchecker – check the syntax of POD format documentation files
+podselect – print selected sections of pod documentation on standard output
+policytool – policy file creation and management tool
+portmap — RPC program,version to DARPA port mapper
+postalias – Postfix alias database maintenance
+postcat – show Postfix queue file contents
+postconf – Postfix configuration utility
+postdrop – Postfix mail posting utility
+postfix – Postfix control program
+postkick – kick a Postfix service
+postlock – lock mail folder and execute command
+postlog – Postfix-compatible logging utility
+postmap – Postfix lookup table management
+postqueue – Postfix queue control
+postsuper – Postfix superintendent
+pppd – Point-to-Point Protocol Daemon
+pr — print files
+printenv — print out the environment
+printf — formatted output
+procmail – autonomous mail processor
+profiles – A utility to report and change SIDs in registry files
+projectInfo — identify build tool for software development project
+prove – Run tests through a TAP harness.
+ps — process status
+psed – a stream editor
+pstopdf — convert PostScript input into a PDF document.
+ptar – a tar-like program written in perl
+ptardiff – program that diffs an extracted archive against an unextracted one
+ptargrep – Apply pattern matching to the contents of files in a tar archive
+purge — force disk cache to be purged (flushed and emptied)
+pwd — return working directory name
+pwd_mkdb — generate the password databases
+pwpolicy — gets and sets password policies
+pydoc — the Python documentation tool
+python – an interpreted, interactive, object-oriented programming language
+pythonw — run python script with GUI
+quot — display total block usage per user for a file system
+quota — display disk usage and limits
+quotacheck — filesystem quota consistency checker
+quotaon, quotaoff — turn filesystem quotas on and off
+racoon — IKE (ISAKMP/Oakley) key management daemon
+ranlib – add or update the table of contents of archive libraries
+rarpd — Reverse ARP Daemon
+rcp — remote file copy
+rcs – change RCS file attributes
+rcs2log — RCS to ChangeLog generator
+rcsclean – clean up working files
+rcsdiff – compare RCS revisions
+rcsmerge – merge RCS revisions
+rebase — Changes base address of dylibs and bundles
+reboot, halt — stopping and restarting the system
+redo_prebinding – redo the prebinding of an executable or dynamic library
+refer – preprocess bibliographic references for groff
+reggie_se — read and modify hardware registers
+renice — alter priority of running processes
+repquota — summarize quotas for a file system
+restore — restore files or file systems from backups made with dump
+rev — reverse lines of a file
+revnetgroup — generate reverse netgroup data
+rlog – print log messages and other information about RCS files
+rlogin — remote login
+rm, unlink — remove directory entries
+rmdir — remove directories
+rmic – Java RMI stub compiler
+rmid – RMI activation system daemon
+rmiregistry – Java remote object registry
+rmt — remote magtape protocol module
+rndc – name server control utility
+rndc-confgen – rndc key generation tool
+rotatelogs – rotate Apache logs without having to kill the server
+route — manually manipulate the routing tables
+routed — network RIP and router discovery routing daemon
+rpc.lockd — NFS file locking daemon
+rpc.statd — host status monitoring daemon
+rpcclient – tool for executing client side MS-RPC functions
+rpcgen — Remote Procedure Call (RPC) protocol compiler
+rpcinfo — report RPC information
+rs – reshape a data array
+rsh — remote shell
+rsync – faster, flexible replacement for rcp
+rtadvd — router advertisement daemon
+rtsold — router solicitation daemon
+ruby — Interpreted object-oriented scripting language
+ruptime — show host status of local machines
+rwho — who is logged in on local machines
+rwhod — system status server
+sa — print system accounting statistics
+sample — Profile a process during a time interval
+sar — system activity reporter
+say – Convert text to audible speech
+sc_usage — show system call usage statistics
+scp — secure copy (remote file copy program)
+screen – screen manager with VT100/ANSI terminal emulation
+screencapture — capture and manipulate clipboard contents
+screenreaderd — VoiceOver daemon
+script — make typescript of terminal session
+scrollpv — graphical scroll pipe viewer of simg5 simulator output
+scselect — Select system configuration “location”
+scutil — Manage system configuration parameters
+sdiff – side-by-side merge of file differences
+sdp — scripting definition processor
+security — Command line interface to keychains and Security.framework
+securityd — Security context daemon for Authorization and cryptographic operations
+sed — stream editor
+segedit – extract and replace sections from object files
+select — synchronous I/O multiplexing
+sendmail – Postfix to Sendmail compatibility interface
+serialver – serial version command
+servertool – Java IDL Server Tool
+setkey — manually manipulate the IPsec SA/SP database
+sftp — secure file transfer program
+shar — create a shell archive of files
+shark — creates *.mshark profiles of system or process behavior for viewing with Shark.app.
+shasum – Print or Check SHA Checksums
+shlock — create or verify a lock file for shell scripts
+showmount — show remote nfs mounts on host
+shutdown — close down the system at a given time
+simg4 — Motorola PowerPC 7400/7410 cycle-accurate simulator
+simg5 — IBM PowerPC 970/970FX cycle-accurate simulator
+sips — scriptable image processing system.
+size – print the size of the sections in an object file
+slapadd – Add entries to a SLAPD database
+slapcat – SLAPD database to LDIF utility
+slapdn – Check a list of string-represented DNs based on schema syntax.
+slapindex – SLAPD index to LDIF utility
+slappasswd – OpenLDAP password utility
+slaptest – Check the suitability of the slapd.conf file.
+slattach — attach serial lines as network interfaces
+sleep — suspend execution for an interval of time
+sliceprint – slice documents with long lines.
+slp_reg — a tool to register URLs
+slpd — slp daemon (service location protocol) that advertises local services to the network
+smbcacls – Set or get ACLs on an NT file or directory names
+smbclient – ftp-like client to access SMB/CIFS resources on servers
+smbcontrol – send messages to smbd, nmbd or winbindd processes
+smbcquotas – Set or get QUOTAs of NTFS 5 shares
+smbd – server to provide SMB/CIFS services to clients
+smbget – wget-like utility for download files over SMB
+smbpasswd – change a user’s SMB password
+smbspool – send a print file to an SMB printer
+smbstatus – report on current Samba connections
+smbtar – shell script for backing up SMB/CIFS shares directly to UNIX tape drives
+smbtree – A text based smb network browser
+smbutil — interface to the SMB requester
+snmpbulkget – communicates with a network entity using SNMP GETBULK requests.
+snmpbulkwalk – retrieve a subtree of management values using SNMP GETBULK requests
+snmpconf – creates and modifies SNMP configuration files
+snmpd – daemon to respond to SNMP request packets.
+snmpdelta – Monitor delta differences in SNMP Counter values
+snmpdf – display disk space usage on a network entity via SNMP
+snmpget – communicates with a network entity using SNMP GET requests
+snmpgetnext – communicates with a network entity using SNMP GETNEXT requests
+snmpnetstat – display networking status and configuration information from a network entity via SNMP
+snmpset – communicates with a network entity using SNMP SET requests
+snmpstatus – retrieves a fixed set of management information from a network entity
+snmptable – retrieve an SNMP table and display it in tabular form
+snmptest – communicates with a network entity using SNMP requests
+snmptranslate – translate MIB OID names between numeric and textual forms
+snmptrap, snmpinform – sends an SNMP notification to a manager
+snmptrapd – Receive and log SNMP trap messages.
+snmpusm – creates and maintains SNMPv3 users on a network entity
+snmpvacm – creates and maintains SNMPv3 View-based Access Control entries on a network entity
+snmpwalk – retrieve a subtree of management values using SNMP GETNEXT requests
+soelim – interpret .so requests in groff input
+softwareupdate — system software update tool
+sort – sort lines of text files
+split — split a file into pieces
+spray — send many packets to host
+sqlite3 – A command line interface for SQLite version 3
+srm – securely remove files or directories
+ssh — OpenSSH SSH client (remote login program)
+ssh-add — adds RSA or DSA identities to the authentication agent
+ssh-agent — authentication agent
+ssh-keygen — authentication key generation, management and conversion
+ssh-keyscan — gather ssh public keys
+sshd — OpenSSH SSH daemon
+stat, readlink — display file status
+states – awk alike text processing tool
+stdethers — a YP filter program
+stdhosts — a YP filter program
+strings – find the printable strings in a object, or other binary, file
+strip – remove symbols
+stty — set the options for a terminal device interface
+su — substitute user identity
+sudo – execute a command as another user
+sw_vers — print Mac OS X operating system version information
+swat – Samba Web Administration Tool
+sync — force completion of pending disk writes (flush cache)
+sysctl — get or set kernel state
+syslog — Apple System Log utility
+syslogd — Apple System Log server
+system_profiler — reports system hardware and software configuration.
+SystemStarter — Start, stop, and restart system services
+tabs — set terminal tabs
+tack – terminfo action checker
+tail — display the last part of a file
+talk — talk to another user
+tar — tape archiver; manipulate “tar” archive files
+tbl – format tables for troff
+tcopy — copy and/or verify mag tapes
+tcpdchk – tcp wrapper configuration checker
+tcpdmatch – tcp wrapper oracle
+tcpdump – dump traffic on a network
+tcsh – C shell with file name completion and command line editing
+tdbbackup – tool for backing up and for validating the integrity of samba .tdb files
+tdbdump – tool for printing the contents of a TDB file
+tdbtool — This line parsed for whatis database.
+tee — pipe fitting
+telnet — user interface to the TELNET protocol
+testparm – check an smb.conf configuration file for internal correctness
+testprns – check printer name for validity with smbd
+texi2dvi – print Texinfo documents
+texi2html – a Texinfo to HTML converter
+texindex – sort Texinfo index files
+textutil — text utility
+tfmtodit – create font files for use with groff -Tdvi
+tftp — trivial file transfer program
+tic – the terminfo entry-description compiler
+tidy – validate, correct, and pretty-print HTML files
+tiff2icns — converts TIFF to icns format
+tiffutil – manipulates tiff files
+tim — authetication server
+time — time command execution
+timed — time server daemon
+timedc — timed control program
+times — process times
+timutil — authetication server utility
+tnameserv – Java IDL name server starter script
+toe – table of (terminfo) entries
+top – display and update sorted information about processes
+tops – perform in-place substitutions on code.
+touch — change file access and modification times
+tput, reset – initialize a terminal or query terminfo database
+tr — translate characters
+traceroute — print the route packets take to network host
+traceroute6 — print the route IPv6 packets will take to the destination
+troff – the troff processor of the groff text formatting system
+trpt — transliterate protocol trace
+true — Return true value.
+tset, reset – terminal initialization
+tsort — topological sort of a directed graph
+tty — return user’s terminal name
+tunefs — tune up an existing file system
+twdiff – find file differences with TextWrangler.
+twfind – OMG PNOIES
+ul — do underlining
+umount — unmount filesystems
+uname — Print operating system name
+unifdef — remove ifdef’ed lines
+uniq — report or filter out repeated lines in a file
+units — conversion program
+unvis — revert a visual representation of data back to original form
+unzip – list, test and extract compressed files in a ZIP archive
+unzipsfx – self-extracting stub for prepending to ZIP archives
+update — flush internal filesystem caches to disk frequently
+update_prebinding — Update prebinding information when new system libraries or frameworks are installed
+uptime — show how long system has been running
+users — list current users
+uuencode, uudecode — encode/decode a binary file
+uuidgen — command-line utility to generate a new UUID value
+verify – Utility to verify certificates.
+vers_string – produce version identification string
+vgrind — grind nice listings of programs
+vim – Vi IMproved, a programmers text editor
+vimdiff – edit two or three versions of a file with Vim and show differences
+vimtutor – the Vim tutor
+vipw — edit the password file
+vis — display non-printable characters in a visual format
+visudo – edit the sudoers file
+vm_stat — show Mach virtual memory statistics
+vmmap — Display the virtual memory regions allocated in a process
+vpnd — Mac OS X VPN service daemon
+w — display who is logged in and what they are doing
+wait4path — wait for given path to show up in the namespace
+wall — write a message to users
+wbinfo – Query information from winbind daemon
+wc — word, line, character, and byte count
+Wget – The non-interactive network downloader.
+what — show what versions of object modules were used to construct a file
+whatis – search the whatis database for complete words.
+whereis — locate programs
+which — locate a program file in the user’s path
+who — display who is on the system
+whoami — display effective user id
+whois — Internet domain name and network number directory service
+winbindd – Name Service Switch daemon for resolving names from NT servers
+write — send a message to another user
+xargs — construct argument list(s) and execute utility
+xcodebuild — build Xcode projects
+xcodeindex — indexes Xcode projects
+xgrid — submit and monitor xgrid jobs
+xgridctl — Xgrid daemons control interface
+xinetd – the extended Internet services daemon
+xml-config – script to get information about the installed version of GNOME-XML
+xml2man — MPGL to mdoc (man page) translator
+xmlcatalog – Command line tool to parse and manipulate XML or SGML catalog files.
+xmllint – command line XML tool
+xsltproc – command line xslt processor
+xsubpp – compiler to convert Perl XS code into C code
+xxd – make a hexdump or do the reverse.
+yacc – GNU Project parser generator
+yes — be repetitively affirmative
+zcmp, zdiff – compare compressed files
+zdump — timezone dumper
+zforce – force a ‘.gz’ extension on all gzip files
+zgrep – search possibly compressed files for a regular expression
+zic — timezone compiler
+zip, zipcloak, zipnote, zipsplit – package and compress (archive) files
+zipdetails – display the internal structure of zip files
+zipgrep – search files in a ZIP archive for lines matching a pattern
+zipinfo – list detailed information about a ZIP archive
+zless – file perusal filter for crt viewing of compressed text
+zmore – file perusal filter for crt viewing of compressed text
+znew – recompress .Z files to .gz files
+zprint – show information about kernel zones
+zsh – the Z shell
