@@ -1,0 +1,52 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\BluetoothMenu]
+"Icon"="bthudtask.exe"
+"MUIVerb"="Bluetooth"
+"Position"="Bottom"
+"SubCommands"=""
+
+
+
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\BluetoothMenu\Shell\1BluetoothDevices]
+"MUIVerb"="Bluetooth Devices"
+"SettingsUri"="ms-settings:bluetooth"
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\BluetoothMenu\Shell\1BluetoothDevices\command]
+"DelegateExecute"="{556FF0D6-A1EE-49E5-9FA4-90AE116AD744}"
+
+
+
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\BluetoothMenu\Shell\2BluetoothFileTransfer]
+"MUIVerb"="Bluetooth File Transfer"
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\BluetoothMenu\shell\2BluetoothFileTransfer\command]
+@="fsquirt.exe"
+
+
+
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\BluetoothMenu\Shell\3Options]
+"MUIVerb"="Options"
+"CommandFlags"=dword:00000020
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\BluetoothMenu\Shell\3Options\command]
+@="rundll32.exe shell32.dll,Control_RunDLL bthprops.cpl,,1"
+
+
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\BluetoothMenu\Shell\4COMPorts]
+"MUIVerb"="COM Ports"
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\BluetoothMenu\Shell\4COMPorts\command]
+@="rundll32.exe shell32.dll,Control_RunDLL bthprops.cpl,,2"
+
+
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\BluetoothMenu\Shell\5Hardware]
+"MUIVerb"="Hardware"
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\BluetoothMenu\Shell\5Hardware\command]
+@="rundll32.exe shell32.dll,Control_RunDLL bthprops.cpl,,3"
