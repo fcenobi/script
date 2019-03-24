@@ -32,3 +32,94 @@ cmd.exe /K \\server\share$\Lansweeper\psloggedon.exe \\{computer}
 
 
 All the tools used here can be downloaded from Microsoft.
+
+action name= Remote Assist (win7)
+Action Code=
+Code:
+
+c:\windows\system32\msra.exe
+
+**Select HELP SOMEONE , then the Advanced Connection bellow, 
+
+FROM a WinXP Machine.
+
+Action name= Remote Assist (XP)
+Action Code=
+Code:
+
+iexplore "hcp://CN=Microsoft%20Corporation,L=Redmond,S=Washington,C=US/Remote%20Assistance/Escalation/Unsolicited/UnSolicitedRCUI.htm"
+
+you CAN leave out the iexplore part but it seemed to work better via iexplore.
+
+
+NOW the Fun Part
+
+TO Enable the reception of the "OFFER" remote assistance option.
+= RUN GPEDIT.MSC from run command line ON THE PC TO RECEIVE HELP. 
+Browse to 
+Local Computer Policy/Computer Configuration/Administrative templates/System/Remote Assistance
+then "ENABLE" the option "Offer remote Assistance"
+
+You can set Remote Helps to something like DOMAIN\Domain Admins 
+to be safe
+
+now you can pop up the assistance request remotely on their pc.
+
+
+
+To make it UNattended :)
+*on the pc to receive help.
+This should be done only if you trust your network....
+
+
+auto accept VIEW
+In XP host, Edit C:\windows\pchealth\HelpCtr\System\Remote Assistance\helpeeaccept.htm 
+Quote:
+
+btnAccept.disabled = false; 
+btnDecline.disabled = false; 
+btnDecline.focus(); 
+
+to this 
+
+btnAccept.disabled = false; 
+btnDecline.disabled = false; 
+btnDecline.focus(); 
+DoAccept(); 
+...
+
+Auto Accept Rmote Control
+
+Find the following line in the c:\windows\pchealth\helpctr\System\Remote Assistance\Interaction\Server\TakeControlMsgs.htm file and insert the one line of code show: 
+Quote:
+
+idExpert1.innerText = vArgs[0]; 
+idExpert2.innerText = vArgs[0]; 
+idExpert3.innerText = vArgs[0]; 
+
+// Added to allow take remote control of PC 
+onClickHandler(0)
+
+
+
+*Credit to whoever on the internet found that code in the first place....
+Optionsfacebook  twitter  linkedin
+dlittle
+#1dlittle MEMBER Posts: 5   posted: 1/28/2013 4:34:15 PM(UTC)
+I used the following as a Custom Asset Action using Lansweeper version 5.0 - 
+
+c:\windows\system32\msra.exe /offerRA {smartname}
+
+It will launch Remote Assistance using the selected computer name.
+
+This action can be used to view all open and locked files on a remote computer.
+
+The tool can be downloaded from the Microsoft website:
+http://technet.microsoft...sinternals/bb897552.aspx
+
+Copy "psfile.exe" to your action folder.
+
+Action:
+cmd.exe /K {actionpath}psfile.exe \\{smartname}
+
+
