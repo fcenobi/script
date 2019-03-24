@@ -1,0 +1,34 @@
+Description: Chkdsk On Next Reboot
+Code:
+cmd.exe /K \\server\share$\Lansweeper\psexec.exe -c -f \\{computer} \\server\share$\Lansweeper\run_chkdsk.bat
+
+\\server\share$\Lansweeper\run_chkdsk.bat
+Code:
+echo Y|chkdsk /F c:
+
+
+Description: Delete User Profiles > 6 months
+Code:
+\\server\share$\Lansweeper\delprof.exe /q /i /c:\\{computer} /d:180
+
+
+Description: Restore SAP Logon
+Code:
+cmd.exe /K \\server\share$\Lansweeper\saplogon.bat {computer}
+
+\\server\share$\Lansweeper\saplogon.bat
+Code:
+copy \\server\share$\Lansweeper\saplogon.ini \\%1\c$\windows
+
+
+Description: Uptime
+Code:
+cmd.exe /K \\server\share$\Lansweeper\uptime.exe {computer} /s
+
+
+Description: Who's Logged On?
+Code:
+cmd.exe /K \\server\share$\Lansweeper\psloggedon.exe \\{computer}
+
+
+All the tools used here can be downloaded from Microsoft.
