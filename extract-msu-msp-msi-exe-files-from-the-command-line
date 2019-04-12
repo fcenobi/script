@@ -1,0 +1,17 @@
+#extract-msu-msp-msi-exe-files-from-the-command-line
+
+
+#Microsoft Hotfix Installer (.exe)
+#setup.exe /t:C:<target_dir> /c
+
+#Microsoft Update Standalone Package (.msu)
+#expand -F:* update.msu C:<target_dir>
+#cd <target_dir>
+#expand -F:* update.cab C:<target_dir>
+
+#Microsoft Patch File (.msp)
+#msix patch.msp /out C:<target_dir>
+#msix.zip
+
+#Windows Installer Package (.msi)
+#msiexec /a setup.msi /qb TARGETDIR=C:<target_dir>
