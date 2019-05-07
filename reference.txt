@@ -1,0 +1,1083 @@
+BootModuleConfig.sh	net-stats
+InstallHelper.sh	netdbg
+VmfsLatencyStats.py	netdbg.py
+Xorg	nfcd
+[	nicmgmtd
+[[	nohup
+amldump	nologin
+apply-host-profiles	nslookup
+applyHostProfile	ntfscat
+applyHostProfileWrapper	ntp-keygen
+ash	ntpd
+authd	ntpq
+auto-backup.sh	od
+awk	openssl
+backup.sh	openwsmand
+basename	pam_tally2
+bootOption	partedUtil
+bunzip2	passwd
+bzip2	pcscd
+cat	pgrep
+chardevlogger	pidof
+check_serial	pigz
+chgrp	ping
+chkconfig	ping6
+chmod	pkill
+chown	pktcap-uw
+chvt	powerOffVms
+cim-diagnostic.sh	poweroff
+cim_host_powerops	printf
+cksum	prop_of_instances
+clear	ps
+cmmds-tool	pwqcheck
+cp	python
+cpio	python3
+crond	python3.5
+crypto-util	python3.5m
+cut	randomSeed
+date	readlink
+dcbd	reboot
+dcui	remoteDeviceConnect
+dcuiweasel	reset
+dd	resize
+df	rhttpproxy
+dhclient-uw	rm
+diff	rmdir
+dirname	runInRP
+dmesg	sched-stats
+dnsdomainname	schedsnapshot
+doat	scp
+dosfsck	sdrsInjector
+du	secpolicytools
+echo	sed
+egrep	sensord
+eject	seq
+enum_instances	services.sh
+env	setsid
+esxcfg-advcfg	
+esxcfg-dumppart	
+esxcfg-fcoe	sha1sum
+esxcfg-hwiscsi	sha256sum
+esxcfg-info	sha512sum
+esxcfg-init	sharedStorageHostProfile.sh
+esxcfg-ipsec	shutdown.sh
+esxcfg-module	sleep
+esxcfg-mpath	slpd
+esxcfg-nas	smartd
+esxcfg-nics	smbiosDump
+esxcfg-rescan	snmpd
+esxcfg-resgrp	sntp
+esxcfg-route	sort
+esxcfg-scsidevs	ssh
+esxcfg-swiscsi	stat
+esxcfg-vmknic	storageRM
+esxcfg-volume	strace
+esxcfg-vswitch	stty
+esxcli	sum
+esxcli.py	summarize-dvfilter
+esxhpcli	sync
+esxhpedit	tail
+esxtop	tar
+esxupdate	taskset
+ethtool	tcpdump-uw
+expr	techsupport.sh
+FALSE	tee
+fdisk	test
+fgrep	time
+find	timeout
+firmwareConfig.sh	tmpwatch.py
+gdbserver	touch
+generate-certificates	tpm2emu
+genisoimage	tracenet
+getty	traceroute
+gpuvm	TRUE
+grabCIMData	uname
+grep	uniq
+gunzip	unlzop
+gzip	unzip
+halt	updateProductLockerPolicy
+hbrfilterctl	uptime
+head	usleep
+hexdump	uwstats
+host_reboot.sh	vdf
+host_shutdown.sh	vdq
+hostd	vdu
+hostd-probe	vi
+hostd-probe.sh	vim-cmd
+hostdCgiServer	vm-support
+hostname	vmdumper
+hwclock	vmfs-support
+imaShim32d	vmfsfilelockinfo
+indcfg	vmkbacktrace
+inetd	vmkchdev
+init	vmkdevmgr
+init-launcher	vmkdump_extract
+initterm.sh	vmkerrcode
+install	vmkfstools
+irqinfo	vmkipcrm
+isoinfo	vmkipcs
+jumpstart	vmkiscsi-tool
+kdestroy	vmkiscsid
+kill	vmkload_mod
+kinit	vmkmkdev
+klist	vmkperf
+less	vmkping
+libvmkdevmgr.so	vmkramdisk
+lldpnetmap	vmkvsitools
+ln	vmtar
+loadESXEnable	vmtoolsd
+localcli	vmware
+lockfile	vmware-autostart.sh
+logchannellogger	vmware-toolbox-cmd
+logger	vmware-usbarbitrator
+login	vmware-vimdump
+ls	vmx
+lsof	vmx-buildtype
+lspci	vmx-debug
+lsusb	vmx-stats
+lzop	voma
+lzopcat	vprobe
+mcopy	vscsiStats
+md5sum	vsi_traverse
+memstats	vsish
+mkdir	vvold
+mkfifo	watch
+mknod	watchdog.sh
+mktemp	wc
+more	wget
+mv	which
+nc	who
+net-cdp	xargs
+net-dvs	xkbcomp
+net-lacp	xz
+net-lbt	zcat
+BootModuleConfig.sh
+
+This Script helps to add/modify/delete the module in the boot,so that you can stop enable the module when ESXi gets boots.
+
+Usage Example:
+https://cormachogan.com/2014/03/28/adding-bespoke-firewall-rules-to-esxi/
+InstallHelper.sh
+
+Esxupdate Installation Helper Script,this will helps to install the tar ball files by extracting and look for the ./install.sh and install the Custom package.Direction to use only to be used by VMware Partner tarball using ESXCLI.
+
+VmfsLatencyStats.py
+
+Collect and format VMFS latency stats using Gunzip to extract it.
+VmfsLatencyStats -E
+Stats Path: /var/run/log/vmfsLatencyData_180520_061940.csv.gz
+
+Xorg
+
+Xorg (commonly referred as simply X) is the most popular display server among Linux users.
+
+amldump
+
+acpidump utility analyzes ACPI tables in physical memory and can dump them to a file
+Refer : https://www.gsp.com/cgi-bin/man.cgi?section=8&topic=acpidump
+
+apply-host-profiles
+
+This will inbuild command for the host profile assignment.
+
+applyHostProfile
+
+Invoke command use to apply the profile and move the host to maintenance mode.
+
+applyHostProfilewrapper
+
+Inbuild function to call the applyhostprofile.
+
+ash
+
+Used in the shell
+Reference : https://linux.die.net/man/1/ash
+
+auto-backup.sh
+
+It will take the backup of the bootbank and the save in the path /tmp &/bootbank
+
+awk
+
+awk command searches files for text containing a pattern
+
+backup.sh
+
+Backup of the following information Bootbank configuration,Alternate bootbank,hardware clock,esxconf
+
+basename 
+
+basename prints NAME with any leading directory components removed. If Suffix is specified, it will also remove a trailing SUFFIX.
+
+bootOption
+
+Get the boot option last state or pull from alternate boot bank
+
+bunzip2 ,bzip2 
+
+Utility (or bzip2 -d) decompresses and restores all specified files whose names end in .bz2
+
+Reference: https://www.mkssoftware.com/docs/man1/bzip2.1.asp
+
+cat
+
+to view the text content.
+
+Reference:http://www.linfo.org/cat.html
+
+chardevlogger
+
+Used by vSAN for the collecting the information or logs in the compress format.
+
+check_serial
+
+Pull the some information from serial connectivity status using commonly in most GNU systems.
+
+chgrp  –associate the user in the group
+
+chkconfig  -to start the service while boot
+
+chmod – change the execution policy
+
+chown – change the owner
+
+chvt – change the virutal terminal
+
+cim-diagnostic.sh – Used to pull the CIM inventory information which will used by inbuild function of the esxi
+
+cim_host_powerops – Power operation of the host via cim
+
+cksum – that generates a checksum value for a file or stream of data
+
+cmmds-tool
+
+Utility which is used for Clustering Monitoring, Membership and Directory Services
+Refer : https://www.virtuallyghetto.com/2013/11/restoring-vsan-vm-storage-policies.html
+
+cpio –  copies files to and from archives
+
+crond
+
+Schedule a job can be run on the stimulated time.
+
+Reference: https://www.computerhope.com/unix/ucrontab.htm
+
+crypto-util
+
+You can decrypt or re-encrypt an encrypted core dump on your ESXi host by using the crypto-util CLI
+Reference :
+https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-A8D99C90-A092-46F8-B9C2-F62856C3AC90.html
+
+Cut
+
+The cut command cuts sections of each line of input files and writes it on its standard output. It is mostly used for taking out a few columns from the input files
+Reference
+https://www.softprayog.in/tutorials/cut-command-in-linux
+
+Date – display the date
+
+dcbd
+
+This package contains the Linux user space daemon and configuration tool for Intel Enhanced Ethernet for the Data Center software.
+
+dcui(direct console user interface)
+
+allows you to interact with the host locally using text-based menus.
+
+dcuiweasel
+
+This interface helps to get into the scripted mode in the intial ESXI boot.You can get the screen when your press shift+O to edit boot options.
+
+dd
+
+dd is a Unix-command-line whose primary purpose is to convert and copy files.
+
+Reference : https://www.geeksforgeeks.org/dd-command-linux/
+
+df
+
+Used to display the partition space available,used and mount volume
+
+dhclient-uw
+
+DHCP Client this help to get the IP address when DCHP is set in the interface.
+
+This are the following logs you observe when you run the command
+2018-06-13T12:58:06Z dhclient-uw[2099808]: 2018-06-13T12:58:06Z dhclient-uw[2099808]: sending dhcp-client-identifier: if: vmk0, id: 00:0c:29:0d:cb:a9
+2018-06-13T12:58:06Z dhclient-uw[2099808]: Sending option dhcp-client-identifier, value 0x3afa17fab91 (7)
+2018-06-13T12:58:08Z dhclient-uw[2099808]: DHCPDISCOVER on vmk0 to 255.255.255.255 port 67 interval 8
+2018-06-13T12:58:09Z dhclient-uw[2099808]: DHCPOFFER from 192.168.1.1
+2018-06-13T12:58:09Z dhclient-uw[2099808]: DHCPREQUEST on vmk0 to 255.255.255.255 port 67
+2018-06-13T12:58:09Z dhclient-uw[2099808]: DHCPACK from 192.168.1.1
+2018-06-13T12:58:10Z dhclient-uw[2099808]: bound to 192.168.1.6 — renewal in 35856 seconds.
+
+I recommended not to run this command.
+
+dirname
+
+Print NAME with its trailing /component removed; if NAME contains no /’s, output ‘.’ (meaning the current directory)
+
+Reference : https://linux.die.net/man/1/dirname
+
+dmesg
+
+dmesg is a command on most Unix-like operating systems that prints the message buffer of the kernel. The output of this command typically contains the messages produced by the device drivers.
+
+dnsdomainname
+to check if your DNS domain name is set correctly use dnsdomainname command and check output of hostname
+
+doat
+doat will wait for a specified amount of time before
+executing a command. If the component is already waiting,
+the existing timeout will simply be extended.
+
+dosfsck
+dosfsck verifies the consistency of MS-DOS file systems and optionally tries to repair them.
+
+du – it similar to df,insist of volume it will should the / partition file size.
+
+echo – it is similar to print command in python or C.
+
+egrep
+egrep is a program which will search a given set of data and print every line which contains a given pattern. It is an extension of a program called grep.
+
+Reference:
+https://ryanstutorials.net/linuxtutorial/grep.php
+
+eject – eject to drive commonly used to eject the cdrom.
+
+ènum_instances
+Library file this property helps to function some CIM functions.
+
+env
+It is used to either print a list of environment variables or run another utility in an altered environment without having to modify the currently existing environment
+
+esxcfg– Inbuilt command which helps to administer and manage  the ESXi configuration.
+
+Please refer the Pubs which has detail information.
+https://pubs.vmware.com/vsphere-50/index.jsp?topic=%2Fcom.vmware.vcli.migration.doc_50%2Fcos_upgrade_technote.1.9.html
+https://pubs.vmware.com/vsphere-4-esx-vcenter/index.jsp?topic=/com.vmware.vsphere.server_configclassic.doc_41/esx_server_config/esx_technical_support_commands/r_esx_technical_support_commands.html
+
+esxcfg-fcoe
+it is used to discovr,enable,disable and VN2VN EN/DE adaptor
+use case blog
+https://vresolv.wordpress.com/2017/12/04/unable-to-discover-storage-with-miss-configured-fcoe-modes/
+
+Want to know more about the VN2VN connectivity in FCoE,
+
+Refer eric smith blog
+
+http://brasstacksblog.typepad.com/brass-tacks/2011/03/pt2pt-and-vn2vn-directly-connecting-an-fcoe-initiator-to-an-fcoe-target-part-1-overview.html
+
+esxcfg-ipsec
+This helps us to configure IPSEC in the esxi host level.
+Reference:
+https://kb.vmware.com/s/article/1021769
+
+esxcfg-rescan – rescan,add and remove the device
+
+Reference: http://www.yellow-bricks.com/2008/01/25/rescan-all-vmhbas-at-once-with-the-esxcfg-rescan-command/
+
+esxhpcli
+serves as a CLI tool to access Host Profiles. The CLI tool is designed to test at various levels in the Host Profiles stack.Based on the operation level chosen, this CLI can invoke host profiles through Hostd via VI API, by invoking the Host Profile Engine directly,or bypassing the Host Profile Engine and invoking profile plug-ins directly.
+
+esxtop
+Inbuild tool to monitor and analyse the performance of host objects.
+
+Reference : http://www.yellow-bricks.com/esxtop/
+
+esxupdate
+This command will be invoke when running esxcli software variables
+
+ethtool
+Display standard information about ethernet device.
+
+Reference: https://www.lifewire.com/ethtool-linux-command-4095412
+
+expr
+Unix utility which evaluates an expression and outputs the corresponding value
+
+fdisk
+disk is a command-line utility that provides disk partitioning functions.
+
+Reference : https://www.computerhope.com/unix/fdisk.htm
+
+fgrep
+
+fgrep command searches the input files specified by the File parameter (standard input by default) for lines that match a pattern.
+
+Reference: https://www.computerhope.com/unix/ufgrep.htm
+
+firmwareConfig
+
+This helps to update the boot configuration parameter of the ESXi during the abrupt power state of the host.You can backup and restore the ESXi Config in the boot state
+Reference KB : https://kb.vmware.com/s/article/2001780
+
+gdbserver
+
+using this tool to debug your application remotely.
+
+Reference : http://man7.org/linux/man-pages/man1/gdbserver.1.html
+
+generate-certificates
+
+to generate new certificates.
+
+VMware Docs : https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.security.doc/GUID-EA0587C7-5151-40B4-88F0-C341E6B1F8D0.html
+
+genisoimage
+
+genisoimage is a pre-mastering program to generate ISO9660/Joliet/HFS hybrid filesystems.
+Source : https://www.unixmen.com/create-iso-image-genisoimage-tool/
+
+Getty  –Manage your terminal session.
+Reference : https://wiki.archlinux.org/index.php/Getty
+
+GPUvm – open architecture for hypervisor-level GPU virtualization
+Reference : https://www.usenix.org/node/184003
+
+grabCIMData – Remotely query the hardware stats via this internal call.
+Reference : https://devops.mentacityventures.com/xymon-vmware-esxi/
+
+grep  – Similar to pulling required keyword or similar to find the word document..
+
+Reference: http://man7.org/linux/man-pages/man1/grep.1.html
+
+gunzip,gzip – compress the files
+Reference Usage :
+https://www.lifewire.com/example-uses-of-the-gunzip-command-4081346
+https://www.tutorialspoint.com/unix_commands/gzip.htm
+
+halt this will shutdown the host,but not the raid controller cache.
+Referece KB: https://kb.vmware.com/s/article/1013193
+
+hbrfilterctl
+
+This helps to monitor your SRM replication status.Author William Lam wrote an article about its use case.
+Reference : https://www.virtuallyghetto.com/2011/07/hbr-host-based-replication-cli-for-srm.html
+
+Head  – Helpful while analysing the logs in the host level.
+Reference : https://shapeshed.com/unix-head/
+
+hexdump – This helps to convert the format from bit,decimal to HEX format.
+
+host_reboot.sh – Invoke host reboot and reboot the ESXi host.
+
+host_shutdown.sh – Invoke host shutdown and shutdown the ESXi host.
+
+Hostd
+
+Hostd helps the vcenter to management the each host connected in inventory.In other words we can call as host agent.
+
+hostd_probe
+The hostd-probe process is a process to monitor hostd
+
+hostd_probe.sh
+Script will invoke and collect the logs of the hostd and hostd_probe log.
+
+hostdCgiServer
+Common gateway interface(CGI) incase the hostd is hungs,this helps to collect via like backdoor.
+
+hostname
+Describes your host name of the esxi
+
+hwclock
+utility for accessing the hardware clock, also referred to as the Real Time Clock (RTC).
+Reference :  http://man7.org/linux/man-pages/man8/hwclock.8.html
+
+imaShim32d
+IMA (iSCSI Management API) which helps in discovery,authenticate and path policy for iSCSI storage export.
+
+indcfg
+CIM Use the SNMP to exchange the management information about the device.I believe this can be call via the WQL(Windows Management Instrumentation Query Language)
+
+inetd provides Internet services.
+Referece: https://en.wikipedia.org/wiki/Inetd
+
+init
+Module loads after the OS kernel
+
+As per TLDP,”When init starts, it becomes the parent or grandparent of all of the processes that start up automatically on your Linux system”
+
+Reference:  https://www.tldp.org/LDP/intro-linux/html/sect_04_02.html
+
+init-launcher
+Install the plugin and helps to add the module in starting configuration.
+
+initterm.sh
+Helps to view the esxi to view via serial connection.
+
+install
+this script helps in the handling the installation.
+
+irqinfo
+list the interrupt currently running
+
+isoinfo
+tility to perform directory like listings of iso9660 images
+
+jumpstart
+Helps in loading the plugin available in the host.
+
+kdestroy
+utility destroys the user’s active Kerberos authorization tickets by writing zeros to the specified credentials cache.
+
+kill
+Helps in terminating the process
+
+kinit
+used to obtain and cache Kerberos ticket-granting tickets
+
+klist
+list the ticktes available in cache
+
+libvmkdevmgr.so – Some library file.
+
+lldpnetmap
+Identifies upstream network switches using LLDP.
+
+Reference:
+https://www.virtuallyghetto.com/2014/05/quick-tip-lldpnetmap-a-handy-utility-to-map-pnic-to-pswitch-on-esxi.html
+
+ln
+Link file viewer.
+Reference:
+http://technorians.com/site/mastering-vsphere-6-5-esxi-logs/
+
+loadESXEnable
+This helps to enable the quick boot of ESXi and this is new feature provided for faster reboot.
+Reference :  https://kb.vmware.com/s/article/52477
+
+localcli
+localcli commands are equivalent to ESXCLI commands, but bypass hostd. The localcli commands are only for situations when hostd is unavailable and cannot be restarted. After you run a localcli command, you must restart hostd
+Not recommended to use in production.
+
+Reference :
+https://www.vcdx200.com/2017/03/esxi-localcli.html
+
+lockfile
+a lockfile-like program for ESXi
+
+logchannellogger
+This helps you redirect the logs files to specfic directory and remote path.
+
+Reference:
+https://blogs.vmware.com/vsphere/2014/10/vmware-virtual-san-performance-testing-part-iii.html
+
+logger
+
+Logger this helps to redirect to standard error(stderr) to device and respective to tags.
+
+Login
+Login helps to connect to remote host and preserve the environment authenticate source.Does work like putty.
+
+ls
+List the files
+
+lsof
+Use to list open files.
+Reference:  https://www.tecmint.com/10-lsof-command-examples-in-linux/
+
+lspci
+lspci is a utility for displaying information about PCI buses in the system and devices connected to them
+Reference:  http://www.tutorialspoint.com/unix_commands/lspci.htm
+
+lsusb
+utility for displaying information about USB buses in the system and the devices connected to them
+Reference:
+https://www.systutorials.com/docs/linux/man/8-lsusb/
+
+lzop
+compression tool which implements the LZO algorithm.
+Reference:  https://linux.die.net/man/1/lzop
+
+lzopcat
+This helps in view of the compress data
+
+mcopy
+helps to copy the multiple files in the name directory.
+Reference: http://www.dca.fee.unicamp.br/sysadmin/helpstuff/mtools/mcopy.html
+
+md5sum
+Helps to verify the checksum of the download files.
+Reference:  https://www.tutorialspoint.com/unix_commands/md5sum.htm
+
+memstats
+MemStats populates m with memory allocator statistics
+Reference : https://kb.vmware.com/s/article/2043413
+
+mkdir
+to Create a directory in the specific path and create in the child path.
+
+mkfifo
+Helps in creation of FIFO files.
+Reference:- http://pubs.opengroup.org/onlinepubs/009604499/functions/mkfifo.html
+
+mknod
+Helps in creation of filesystem node.
+Reference: http://man7.org/linux/man-pages/man2/mknod.2.html
+
+mktemp
+Create a temporary file or directory, safely, and print its name.
+
+more
+Use while using grep and list the more content.
+
+mv
+Move file from one directory to another directory or file path.
+
+nc(netcat)
+networking utility for reading from and writing to network connections using TCP or UDP.
+
+Reference: http://www.tutorialspoint.com/unix_commands/nc.htm
+
+net-cdp module implements for advertiser/listener for the Cisco Discovery Protocol.
+
+net-dvs  Helps in configuring the distributed switch and for troubleshooting.
+Reference:
+http://www.yellow-bricks.com/2012/02/23/digging-deeper-into-the-vds-construct/
+
+net-lacp Helps in configuring and troubleshooting the LACP.
+
+net-lbt utility for the Load-Based Teaming.
+Reference: http://www.virt-infrastructure.com/?p=651
+
+net-stats Utility helps in get the complete network statistics for the vswitch,vnic and scsi device.
+
+Reference:
+VMXNET3 RX Ring Buffer Exhaustion and Packet Loss
+
+netdbg utility use for the debugging purpose.
+
+Reference:
+https://www.virtuallyghetto.com/2018/04/native-mac-learning-in-vsphere-6-7-removes-the-need-for-promiscuous-mode-for-nested-esxi.html
+
+nfcd I’m not pretty sure about the service.But this service i belive this use in the opening the vMotion change and verify the memory corruption during the migration.
+
+nicmgmtd
+
+This daemon is used to get the pnic state by sending magic response and magic arp to network.log location mostly available in /var/run/vmware/ location,it is VMware internal purpose.
+
+nohup hangup (signal, which is normally sent to a process to inform it that the user has logged off  is intercepted by nohup
+
+Reference:
+https://linux.die.net/man/1/nohup
+
+nologin
+nologin displays a message that an account is not available and exits non-zero. It is intended as a replacement shell field to deny login access to an account.
+Reference: http://man7.org/linux/man-pages/man8/nologin.8.html
+
+nslookup NSLOOKUP is a service to look up information in the DNS
+
+ntfscat print NTFS files and streams on the standard output
+Reference: https://linux.die.net/man/8/ntfscat
+
+ntp-keygen generate public and private keys
+Reference: https://linux.die.net/man/8/ntp-keygen
+
+ntpd System daemon which sets and maintains the system time of day in synchronism with Internet standard time servers
+Reference: https://linux.die.net/man/8/ntpd
+
+ntpq ntpq utility program is used to monitor NTP daemon
+Reference: https://kb.vmware.com/s/article/1005092
+
+od program for displaying data in various human-readable output formats
+Reference: http://man7.org/linux/man-pages/man1/od.1.html
+
+Openssl OpenSSL can be used for creating certificate requests and also as a certificate authority.
+Reference: https://kb.vmware.com/s/article/2015387
+
+Openwsman
+Openwsman is a project intended to provide an open-source implementation of the Web Services Management specification (WS-Management) and to expose system management information on the Linux operating system using the WS-Management protocol
+
+Reference: https://github.com/Openwsman/openwsman/wiki
+
+pam_tally2
+This module maintains a count of attempted accesses, can reset count on success, can deny access if too many attempts fail.
+
+partedUtil
+partedUtil command line utility to directly manipulate partition tables for local and remote SAN disks on ESXi and ESX
+
+Reference: https://kb.vmware.com/kb/1036609
+
+passwd To change the password to user.
+
+pcscd pcscd daemon is used to manage connections to PC and SC smart card (formally PCMCIA) readers.
+
+pgrep
+pgrep looks through the currently running processes and lists the process IDs which matches the selection criteria to stdout.
+
+Reference: https://www.systutorials.com/docs/linux/man/1-pgrep/
+
+Pidof  Pidof finds the process id’s (pids) of the named program
+Reference: http://man7.org/linux/man-pages/man1/pidof.1.html
+
+Pigz Pigz is a parallel gzip implementation.
+Reference: https://zlib.net/pigz/
+
+ping utility used to test the reachability of a host used for IPV4 addressing.
+
+Ping6 similar to ping but used for the IPV6 addressing.
+
+pkill simliar to kill command.
+Usage reference:
+https://www.lifewire.com/list-and-kill-processes-using-the-pgrep-and-pkill-4065112
+
+pktcap-uw pktcap-uw utility to inspect the contents of packets while they traverse the network stack on an ESXi host
+
+Reference:
+https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-30003897-2101-459C-81FA-FCB42313237E.html
+
+powerOffVms
+Python script to poweroff all vm running in the host which has vmware tools running state.(Carefull using of command in production)
+
+poweroff  Poweroff the ESXi host.
+
+printf  Print the value after printf command.
+
+prop_of_instances Used in CIM for pull information.
+
+ps utility for gather ESXi process information.
+Reference: https://kb.vmware.com/s/article/1010993
+
+pwqcheck program checks passphrase quality
+Reference:  https://www.systutorials.com/docs/linux/man/1-pwqcheck/
+
+python/python3/python3.5/python3.5m
+Python lib files according to version which contains the python lib path.
+
+randomSeed Helps to get the random values.
+
+Readlink print value of a symbolic link or canonical file name
+Reference: https://linux.die.net/man/1/readlink
+
+reboot Helps in the rebooting the host.
+
+remoteDeviceConnect Utility helps to mount the removal media to host.
+
+reset utliity to reset the terminal.
+
+resize binary file to resize the files(Try to get the actual usage)
+
+rhttpproxy Utility in reverse http proxy service.
+
+rm remove the file.
+
+rmdir remove the directory.
+
+runInRP Script to run a userworld application within its own resource pool.
+
+sched-stats reads the stats data from vmkernel
+Example usage: sched-stats -t numa-global
+
+schedsnapshot Snapshot vmkernel scheduler statistics and/or traces
+Usage Reference :
+positional arguments:
+ssdir Directory to store the snapshot
+time Collection duration in seconds
+
+optional arguments:
+-h, –help show this help message and exit
+–novsi Skip VSI cache collection (collect a subset of sched-stats)
+–notrace Skip schedtrace collection
+–nozip Skip compressing the output file
+–noreset No sched-stats reset
+–novmkstats Skip collecting vmkstats
+
+Syntax : schedsnapshot –notrace /tmp 5
+
+scp : SCP utility that is used to copy files to or from an ESX host
+Reference: https://kb.vmware.com/s/article/1918
+
+sdrsInjector tool helps build device model of a datastore in order to enable Storage DRS initial placement and load balancing decisions
+
+secpolicytools
+Utility used by host to verify the grant/deny permission for individual modules.
+
+Reference:
+https://www.v-front.de/2012/11/a-daemons-vib-part-3-building-software.html
+
+sed  utility that parses and transforms text, using a simple, compact programming language
+Reference: https://www.tutorialspoint.com/sed/
+
+sensord Utility to monitor the hardware components.
+Usage:
+[root@localhost:/bin] sensord -v
+Machine has 2 core(s) and 2 logical processor(s)
+In vsi: power = 0W, cap = 0W, min = 0W
+
+seq  utility for generating a sequence of numbers
+Reference:
+http://www.tutorialspoint.com/unix_commands/seq.htm
+
+services.sh
+restart the services in /etc/init.d/
+
+setsid
+creates a new session if the calling process is not a process group leader.
+
+sfcbd Monitoring hardware services which works with CIM.
+Reference troubleshooting when not works;
+http://vcdx56.com/2017/06/esxi-6-5-service-sfcbd-watchdog-not-running/
+
+sh it provides the terminal or shell.
+
+sha1sum/sha256sum/sha512sum
+Checksum utility useful when downloading the files to host verify an loss in file or broken.
+
+sharedStorageHostProfile.sh
+# This script exports 5 commands: “local”, “remote”, “compare” and “configure”,
+# plus “automatic”. This last executes the first 4 commands in sequence.
+# Local and remote extract the PSA PsaDeviceSharingProfile in text form from,
+# respectively, the local and a specified remote host which must have ssh
+# enabled, etc. The compare command extracts a list of devices and sharing
+# state from the two profiles and generates lists of shared and non-shared
+# devices on the two hosts plus a set of esxcli commands to reset clusterwide
+# sharing to match the observed sharing between the hosts. The configure
+# command sets devices to be shared clusterwide or not shared clusterwide on
+# the local host and user can edit the command file before running this command.
+
+shutdown.sh shutdown the host gracefully.
+
+sleep pause the session or work for stimulated time.
+
+slpd Service Location Protocol Daemon
+Reference: https://www.unix.com/man-page/all/1M/slpd/
+
+smartd daemon (a helper program) that monitors the health of physical hard disk drives
+Reference: https://kb.vmware.com/s/article/2040405
+
+smbiosDump Alternative for dmicode
+Reference: http://www.vi-toolkit.com/wiki/index.php/Dmidecode
+
+snmpd SNMP Daemon for monitoring your device.
+
+sntp used to synchronize computer clocks on a network
+Usage: sntp 0.in.pool.ntp.org
+
+sort sort is a standard command line program that prints the lines of its input or concatenation of all files listed in its argument list in sorted orde
+
+ssh Helps in remoting the linux box.
+
+stat Used for displaying status information of Linux files and file systems
+
+Usage Example
+[root@localhost:/bin] stat hostd
+File: hostd
+Size: 20838704 Blocks: 40704 IO Block: 131072 regular file
+Device: 1h/1d Inode: 2890 Links: 1
+Access: (0555/-r-xr-xr-x) Uid: ( 0/ root) Gid: ( 0/ root)
+Access: 2018-07-14 13:18:56.000000000
+Modify: 2018-04-03 21:46:24.000000000
+Change: 2018-04-03 21:46:24.000000000
+
+storageRM
+This tool does flow control at the host in order to maintain disk I/O latency close to a threshold and queue sizes converge at values proportional to the beta parameter.
+
+strace Useful trace the execution of any executable.
+Reference
+https://www.thegeekstuff.com/2011/11/strace-examples
+
+stty print all current settings in human-readable form
+Reference http://www.tutorialspoint.com/unix_commands/stty.htm
+
+sum utility outputs the checksum of each argument file, as well as the number of blocks they take on disk
+Reference https://en.wikipedia.org/wiki/Sum_(Unix)
+
+summarize-dvfilter command display all IOChains and firewall filter on ESXi host.
+Reference: http://www.routetocloud.com/tag/dvfilter/
+
+sync System call,sync ensures that everything in memory is written to disk.
+
+tail  display the tail end of a text file or piped data
+
+taskset used to set or retrieve the CPU affinity of a running process given its PID or to launch a new COMMAND with a given CPU affinity
+
+tcpdump-uw This tool helps in the capturing the TCPDUMP for the network card level to analyse the network level issues.
+Reference: https://rickardnobel.se/tcpdump-uw-for-troubleshoot-esxi-networking/
+
+techsupport.sh this will enter to login screen with out login inputs.If you have login in ssh and need to relogin again.
+
+tee command reads the standard input and writes it to both the standard output and one or more files
+
+time,timeout Program to maintaining the time and timeout.
+
+tmpwatch.py  removes stale temporary files
+
+touch create a file.
+
+tpm2emu Trusted Platform Modules helps in securely store artifacts used to authenticate the platform.
+
+tracenet Helps in the probing the host in the same network.
+
+traceroute helps to trace the destination route.
+
+uname prints the name, version and other details about the current machine and the operating system running on it.
+
+uniq  utility that reports or filters out the repeated lines in a file
+
+unlzop decompress the implements the LZO algorithm and is licensed under the GPL
+
+unzip Zipped files will be retrieve back.
+
+updateProductLockerPolicy This tool mainly used to moduy the productlocker symlink which is available after the version ESXi 6.5 U1.
+Reference Usage: https://kb.vmware.com/s/article/2129825
+
+uptime Helps to view the host live age.
+
+usleep Suspend execution for an interval.
+
+uwstats to view Userworld Resource Statistics.
+Reference discussion https://vcp4.wordpress.com/2010/01/03/what-is-world-in-esx/
+
+vdf Helps in view the disk usage of the modules.
+Reference https://kb.vmware.com/s/article/1003564
+
+vdq(VSAN Disk Query) Helps to information of the vSAN disk
+Reference: https://www.virtuallyghetto.com/2014/02/vdq-useful-little-vsan-utility.html
+
+vi editor used to configuration changes.
+
+vim-cmd utlity for admin for the performing task related to vm level.
+Reference: http://www.doublecloud.org/2013/11/vmware-esxi-vim-cmd-command-a-quick-tutorial/
+
+vm-support helps in collecting the diagnostic logs for the support or for our troubleshooting.
+Reference: https://kb.vmware.com/s/article/1010705
+
+vmdumper Use to send the NMI interrup to VM and make it panic to that VM.
+Reference: https://www.virtuallyghetto.com/tag/vmdumper
+
+vmfs-support this script has true or false condition and execute the VMFSTOOLS -D command based on the request.I belive this is been used for the internal purpose,it is not allowed to execute
+
+vmfsfilelockinfo Utility helps to identify the VM file locked host.
+Usage:
+vmfsfilelockinfo -p /vmfs/volumes/[Datastore Name]/New\ Virtual\ Machine/New\ Virtual\ Machine.vmx
+vmfsfilelockinfo Version 2.0
+Looking for lock owners on “New Virtual Machine.vmx”
+“New Virtual Machine.vmx” is locked in Exclusive mode by host having mac address [’00:0c:29:0d:cb:a9′]
+Trying to use information from VMFS Heartbeat
+Host owning the lock on file is 192.168.1.7, lockMode : Exclusive
+Total time taken : 4.4427438600000642 seconds.
+
+vmkbacktrace helps to collect live process dump without affecting the services.
+Usage:
+vmkbacktrace -w -n hostd -td /vmfs/volumes/[Datastore Name]/
+
+vmkchdev (VMkernel Change Device)
+this helps to identify Vendor ID (VID), Device ID (DID), Sub-Vendor ID (SVID), and Sub-Device ID (SDID) for compactability and firmware/driver of device.
+Reference: https://kb.vmware.com/s/article/1027206
+
+vmkdevmgr helps to identify the alias created for the devices.
+
+vmkdump_extract vmkdump_extract to extract dump including the logs within the core dump
+Reference Usage:
+http://vmwareaddicted.blogspot.com/2016/03/how-to-analyze-purple-screen-of-death.html
+Addition:
+https://vbrownbag.com/2009/02/how-to-read-a-dump-esx-crash-dumps-that-is/
+
+vmkerrcode man page of all VMkernel errors with brief description
+Reference: https://kb.vmware.com/s/article/1000084
+
+vmfstools create and manage the volumes and storage devices of host.
+Reference: https://www.vmware.com/support/developer/vcli/vcli41/doc/reference/vmkfstools.html
+
+vmkipcrm helps to remove the semaphore and shm(shared memory)
+Semaphore : synchronization object that controls access by multiple processes to a common resource
+SHM : remove the application shared memory.
+Reference: https://stereochro.me/assets/uploads/notes/dcom3/shmem.pdf
+
+vmkipcs
+utlity to find out the usage of the semaphore and shared memory.
+
+vmkiscsi-tool
+iscsi utility used for all iscsi connect and management purpose.This is deprecated utility
+Reference:
+https://kb.vmware.com/s/article/2107558
+
+vmkiscsid iscsi utility helps in the configure and debugging the iscsi daemon
+Reference:
+https://kb.vmware.com/s/article/1013283
+
+vmkload_mod helps to identify driver and firmware information of device this similar to other commands.
+Reference:
+https://kb.vmware.com/s/article/1027206
+
+vmkmkdev Create a ‘loopback’ device that points to a big file in your filesystem
+
+vmkperf utility to monitor the system performance events.
+Reference: https://communities.vmware.com/docs/DOC-16872
+
+vmkping helps to check then vmkernel network connectivity.
+Usage reference
+https://kb.vmware.com/s/article/1003728
+
+vmkramdisk utility helps in mounting the tar file directly into the file system.
+Usage reference:
+http://thefluffyadmin.net/?p=883
+
+vmkvsitools helps to retrieve the vsi cache details using this command.
+Reference:
+https://kb.vmware.com/s/article/1033317
+
+vmtar helps to tar the vmtar files in destire location.
+Reference:
+https://www.virtuallyghetto.com/tag/vmtar
+
+vmtoolsd,vmware-toolbox-cmd
+When you run the ESXi host you will see the vmtoolsd since vmtools installed in vm.
+
+vmware
+Utility to get the information about the esxi version.
+
+vmware-vimdump
+produces thousands of lines of output and is not intended for interactive use.
+
+vmware-vmx will update this section.
+
+vmx-builtype utility helps to collect additional virtual machine statistics.
+Reference: https://kb.vmware.com/s/article/2009512
+
+voma vSphere On-disk Metadata Analyzer (voma) helps to identify the vmfs metadata consistency
+Reference: https://kb.vmware.com/s/article/2036767
+
+vprobe deep observation of events of hypervisor and virtual machines
+white paper:
+https://labs.vmware.com/vmtj/vprobes-deep-observability-into-the-esxi-hypervisor
+
+vscsiStats helps to analysis the vm scsi stats for the troubleshooting the performance related issues.
+Reference:
+http://www.yellow-bricks.com/2009/12/17/vscsistats/
+
+vsi_traverse
+collecting data for each GET and LIST handler and writing it out to a file
+
+Vsish  utility also known as the VMkernel Sys Info Shell and helpful in information gathering.
+
+vvold utility used for the virtual volume.Will be creating a section under vvols.
+Reference
+https://kb.vmware.com/kb/2113013
+
+watch this command will be helpful when monitoring the snapshot deletion.
+Reference:
+https://kb.vmware.com/s/article/1007566
+
+watchdog.sh script that manages the vmware services.
+
+wc used to find out number of newline count, word count, byte and characters count in a files specified by the file arguments
+
+wget helps to download the file from Internet
+
+which searches the path of executable in system paths set in $PATH environment variable
+
+who command let you which user logged in
+
+xargs used to build and execute commands from standard input
+
+xkbcomp compiler converts a description of an XKB keymap into one of several output formats
+
+Reference: https://www.systutorials.com/docs/linux/man/1-xkbcomp/
+
+xz compress and decompress the xz file format
+
+zcat Most useful tools to view the compress the logs without anychanges.
+Reference: https://linux.die.net/man/1/zcat
