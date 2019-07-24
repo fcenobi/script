@@ -1,0 +1,1 @@
+cat /etc/vmware/hostd/webAccessibleConfigFiles.xml | awk -F'>' '{print $2}' | awk -F'<' ' {print $1}'| grep -v GET | grep -v HEAD |grep -v -i PUT|grep -v ^$ | sed 's/\/host\//<li><a href=".\/hosts\//g' | sed 's/\/var\//">/g'|sed 's/text\/plain/<\/a><\/li>/g'  > /home/link.html
