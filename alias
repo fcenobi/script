@@ -51,4 +51,6 @@ alias srestart='systemctrl restart '
 alias sstatus='systemctrl status '
 alias sstop='systemctrl stop '
 alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+alias catalina_base='cd $CATALINA_BASE'
+alias catalina_home='cd $CATALINA_HOME'
 
