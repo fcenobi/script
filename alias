@@ -3,24 +3,10 @@ alias senable='systemctl enable '
 alias srestart='systemctl restart '
 alias sstatus='systemctl status '
 alias sstop='systemctl stop '
-alias filetree="find | sed 's|[^/]*/|- |g'"
-alias dirtree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
-alias lst='ls -R | grep ":$" | sed -e '"'"'s/:$//'"'"' -e '"'"'s/[^-][^\/]*\//--/g'"'"' -e '"'"'s/^/   /'"'"' -e '"'"'s/-/|/'"'"
-alias ls='ls --color=auto'
-alias la='ls --color=auto -A'
-alias l='ls --color=auto -CF'
-alias "lsmod=ls -al|awk '{k=0;s=0;for(i=0;i<=8;i++){;k+=((substr(\$1,i+2,1)~/[rwxst]/)*2^(8-i));};j=4;for(i=4;i<=10;i+=3){;s+=((substr(\$1,i,1)~/[stST]/)*j);j/=2;};if(k){;printf(\"%0o%0o \",s,k);};print;}'" 
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias ls="ls -F"
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias ll='ls -alhFtr'
-alias findf='find . -type f -name '
-alias ffind='find . -type f -ls  '
-alias pkgsearch='apt-get search  '
+alias asearch='apt-cache search '
+alias ainstall='apt-get install  -y '
+alias aremove='apt-get remove -y '
+alias aupdate=*apt-get upgrade '
 alias stnode='pm2 start --max-memory-restart 500M  '
 alias gs="git-status"
 alias gd="git-diff"
@@ -32,21 +18,27 @@ alias gcam="git-commit --amend -v"
 alias gl="git-log"
 alias gll="git-log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias penv-reload="source $PENV_PATH"
-alias cp='cp -i'
-alias dirtree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
 alias dnf-install='dnf install -y '
 alias dnf-search='dnf search '
-alias egrep='egrep --color=auto'
-alias ffind='find . -type f -ls '
-alias fgrep='fgrep --color=auto'
-alias filetree='find | sed '\''s|[^/]*/|- |g'\'''
-alias findf='find . -type f -name '
 alias grep='grep --color=auto'
-alias l.='ls -d .* --color=auto'
-alias lst='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias cp='cp -i'
 alias mv='mv -i'
-alias psfind='ps aux | grep -i '
 alias rm='rm -i'
 alias catalina_base='cd $CATALINA_BASE'
 alias catalina_home='cd $CATALINA_HOME'
-alias ll='ls --color=auto -alFhtr'
+alias psfind='ps aux | grep -i '
+alias findf='find . -type f -name '
+alias ffind='find . -type f -ls  '
+alias ls='/bin/ls --color=auto'
+alias la='/bin/ls --color=auto -A'
+alias l='/bin/ls --color=auto -CF'
+alias l.='/bin/ls -d .* --color=auto'
+alias ll='/bin/ls --color=auto -alFhtr'
+alias lst1='/bin/ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
+alias lst='/bin/ls -R | grep ":$" | sed -e '"'"'s/:$//'"'"' -e '"'"'s/[^-][^\/]*\//--/g'"'"' -e '"'"'s/^/   /'"'"' -e '"'"'s/-/|/'"'"
+alias "lsmod=ls -al|awk '{k=0;s=0;for(i=0;i<=8;i++){;k+=((substr(\$1,i+2,1)~/[rwxst]/)*2^(8-i));};j=4;for(i=4;i<=10;i+=3){;s+=((substr(\$1,i,1)~/[stST]/)*j);j/=2;};if(k){;printf(\"%0o%0o \",s,k);};print;}'" 
+alias filetree='find | sed '\''s|[^/]*/|- |g'\'''
+alias filetree1="find | sed 's|[^/]*/|- |g'"
+alias dirtree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
