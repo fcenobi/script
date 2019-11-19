@@ -10,5 +10,5 @@ function lls {
 function nocommentxml {
   XMLFILE=$1
 
- cat $XMLFILE | sed 's/<!--/\x0<!--/g;s/-->/-->\x0/g' | grep -zv '^<!--' | tr -d '\0' 
+ cat $XMLFILE | sed 's/<!--/\x0<!--/g;s/-->/-->\x0/g' | grep -zv '^<!--' | tr -d '\0'| grep -v -e '^$'
  }
