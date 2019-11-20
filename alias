@@ -1,3 +1,4 @@
+export ALIAS_PATH="https://raw.githubusercontent.com/fcenobi/script/master/alias"
 alias sdisable='systemctl disable '
 alias senable='systemctl enable '
 alias srestart='systemctl restart '
