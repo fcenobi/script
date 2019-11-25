@@ -1,3 +1,5 @@
+export FCGITBASE="https://github.com/fcenobi/"
+expoer FCRAWBASE="https://raw.githubusercontent.com/fcenobi/"
 export ALIAS_PATH="https://raw.githubusercontent.com/fcenobi/script/master/alias"
 #/bin/bash < <(curl -s $ALIAS_PATH)
 
@@ -11,6 +13,8 @@ alias ainstall='apt-get install  -y '
 alias aremove='apt-get remove -y '
 alias aupdate='apt-get upgrade '
 alias stnode='pm2 start --max-memory-restart 500M  '
+alias gclone='git clone '
+alias fcclone=git clone https://github.com/fcenobi/.git
 alias gs='git-status'
 alias gd='git-diff'
 alias ga='git-add'
