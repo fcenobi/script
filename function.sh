@@ -12,3 +12,9 @@ function nocommentxml {
 
  cat $XMLFILE | sed 's/<!--/\x0<!--/g;s/-->/-->\x0/g' | grep -zv '^<!--' | tr -d '\0'| grep -v -e '^$'
  }
+
+function parameterlistfromhelo {
+ HELPFILE=$1
+ 
+ $1 --help | grep -e ^-- | awk '{ print $1 "   $" toupper($1) "  "}' | sed 's/\$--/\$/g'
+}
