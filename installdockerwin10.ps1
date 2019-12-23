@@ -41,3 +41,7 @@ if ($restartNeeded) {
 } else {
     Start-Service docker
 }
+
+#docker pull portainer/portainer
+
+#docker run -d --restart always --name portainer --isolation process -h portainer -p 9000:9000 -v //./pipe/docker_engine://./pipe/docker_engine portainer/portainer
