@@ -55,11 +55,11 @@ alias filetree1="find | sed 's|[^/]*/|- |g'"
 alias dirtree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
 alias apachestatus='apache2ctl -SMt -D DUMP_INCLUDES '
 alias lspath='sed 's/:/\n/g' <<< "$PATH"'
-alias updatealiases='curl -s $ALIAS_PATH > ~/.bash_aliases && chmod +x  ~/.bash_aliases '
+alias updatealiases='curl -s $ALIAS_PATH > ~/.bash_aliases && chmod +777  ~/.bash_aliases '
 
 
 export FCGITBASE="https://github.com/fcenobi/"
 export FCRAWBASE="https://raw.githubusercontent.com/fcenobi/"
 export ALIAS_PATH="https://raw.githubusercontent.com/fcenobi/script/master/alias"
-alias updatprofiled='curl -s $ALIAS_PATH > /etc/profile.d/aliases.sh && chmod +x /etc/profile.d/aliases.sh '
+alias updatprofiled='curl -s $ALIAS_PATH > /etc/profile.d/aliases.sh && chmod +777 /etc/profile.d/aliases.sh '
 alias updatealias='/bin/bash < <(curl -s $ALIAS_PATH) '
