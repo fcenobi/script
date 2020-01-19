@@ -5,11 +5,11 @@ function url($url) {
 }
 
 function getUrl($url,$index,$subDomain=null,$issecure=false,$www=true) {
-//  $url=$_SERVER['SERVER_NAME']
+ // $url=$_SERVER['SERVER_NAME']
   $protocol=($issecure==true) ?  "https://" : "http://";
   $url= substr($url,$index);
   $www =($www==true) ? "www": "";
-  $url= empty($subDomain) ? $protocol.$url :
+  //$url= empty($subDomain) ? $protocol.$url :
   $protocol.$www.$subDomain.$url;
   return $url;
 }
@@ -114,8 +114,12 @@ function getBaseUrl()
     <body>
         <div class="container">
             <div class="content">
-                <div class="title" title="web.fcenobi.com">web.fcenobi.com</div>
-
+     
+               <div class="title"><br />
+  
+               <?php print($_SERVER['SERVER_NAME']); ?>
+   <br />
+   </div>
                 <div class="info"><br />
          <!--             <?php print($_SERVER['SERVER_SOFTWARE']); ?><br />
                       PHP version: <?php print phpversion(); ?>   <span><a title="phpinfo()" href="/?q=info">info</a></span><br />
