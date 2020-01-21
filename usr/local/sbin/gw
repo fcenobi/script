@@ -1,5 +1,5 @@
 #!/bin/sh
 #curl http://checkip.dyndns.org/ | cut -c 77-91 | sed 's/\///'| sed 's/<//'
 
-IP=$(curl -s  http:\/\/checkip.dyndns.org\/ | cut -c 77-91 | sed 's/\///'| sed 's/<//'  )
-echo $IP
+WANIP=$(curl -s  http:\/\/checkip.dyndns.org\/ | cut -c 77-91 | sed 's/\///'| sed 's/<//'  )
+echo $WANIP
