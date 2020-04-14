@@ -26,7 +26,7 @@ alias asearch='apt-cache search '
 alias ainstall='apt-get install  -y '
 alias aremove='apt-get remove -y '
 alias aupdate='apt-get upgrade '
-
+alias ainstall-norecomend='apt-get -y -o APT::Install-Recommends=false -o APT::Get::AutomaticRemove=true -o APT::Acquire::Retries=3 install '
 alias stnode='pm2 start --max-memory-restart 500M  '
 
 #alias gclone='git clone '
