@@ -10,9 +10,9 @@ alias ll='/bin/ls --color=auto -alFhtr'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias cp='cp -i'
-alias mv='mv -i'
-alias rm='rm -i'
+alias cp-f='cp -i'
+alias mv-f='mv -i'
+alias rm-f='rm -i'
 
 
 alias sdisable='systemctl disable '
@@ -20,7 +20,7 @@ alias senable='systemctl enable '
 alias srestart='systemctl restart '
 alias sstatus='systemctl status '
 alias sstop='systemctl stop '
-alias sstart='systemctl stop '
+alias sstart='systemctl start '
 
 alias asearch='apt-cache search '
 alias ainstall='apt-get install  -y '
@@ -29,8 +29,8 @@ alias aupdate='apt-get upgrade '
 alias ainstall-norecomend='apt-get -y -o APT::Install-Recommends=false -o APT::Get::AutomaticRemove=true -o APT::Acquire::Retries=3 install '
 alias stnode='pm2 start --max-memory-restart 500M  '
 
-#alias gclone='git clone '
-#alias fcclone="git clone https://github.com/fcenobi/$1.git"
+alias gclone='git clone '
+alias fcclone="git clone https://github.com/fcenobi/$1.git"
 #alias gs='git-status'
 #alias gd='git-diff'
 #alias ga='git-add'
@@ -43,8 +43,8 @@ alias stnode='pm2 start --max-memory-restart 500M  '
 
 alias penv-reload="source $PENV_PATH"
 
-alias dnf-install='dnf install -y '
-alias dnf-search='dnf search '
+#alias dnf-install='dnf install -y '
+#alias dnf-search='dnf search '
 alias catalina_base='cd $CATALINA_BASE'
 alias catalina_home='cd $CATALINA_HOME'
 alias lst1='/bin/ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
