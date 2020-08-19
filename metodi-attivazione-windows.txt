@@ -1,0 +1,55 @@
+
+Se hai ottenuto Windows 10...	Metodo di attivazione
+Mediante l'aggiornamento gratuito a Windows 10 da un dispositivo idoneo in cui è in esecuzione una copia originale di Windows 7 o Windows 8.1	
+Licenza digitale
+
+Se è stato associato o è stato effettuato l'accesso a un account Microsoft o a un MSA associato a una licenza digitale, quello sarà il tuo MSA contenente la licenza digitale.
+
+Acquisto di un aggiornamento a Windows 10 Pro dall'app Microsoft Store e attivazione completa di Windows 10	
+Licenza digitale
+
+Se l’acquisto viene effettuato da Microsoft Store, viene inviato un messaggio di posta elettronica che conferma l'acquisto. L'indirizzo di posta elettronica (MSA) conterrà la licenza digitale.
+
+Partecipazione al Programma Windows Insider ed esecuzione dell'aggiornamento alla versione più recente di Windows 10 Insider Preview su un dispositivo idoneo in cui era in esecuzione una versione attivata in precedenza di Windows e Windows 10 Preview	
+Licenza digitale
+
+L'indirizzo di posta elettronica usato per l'account di accesso a Windows Insider sarà probabilmente il MSA contenente la licenza digitale.
+
+Acquistando Windows 10 originale tramite l'app Microsoft Store 	
+Licenza digitale
+
+Se l’acquisto viene effettuato da Microsoft Store, viene inviato un messaggio di posta elettronica che conferma l'acquisto. L'indirizzo di posta elettronica (MSA) conterrà la licenza digitale.
+
+Acquisto di un PC con Windows 10	
+Codice Product Key
+
+Trova il codice Product Key sulla confezione del dispositivo o sul certificato di autenticità (COA) allegato al dispositivo.
+
+Acquisto di una copia di Windows 10 da un rivenditore autorizzato	
+Codice Product Key
+
+Trova il codice Product Key su un'etichetta all'interno della confezione di Windows 10.
+
+Acquisto di una copia digitale di Windows 10 da un rivenditore autorizzato	
+Codice Product Key
+
+Trova il codice Product Key nell'e-mail di conferma ricevuta dopo l'acquisto di Windows 10 o in un raccoglitore digitale accessibile tramite il sito Web del rivenditore.
+
+Al tuo dispositivo verrà assegnata una licenza digitale per Windows 10 in base al codice Product Key valido immesso.
+
+Disponendo di un contratto multilicenza per Windows 10 o di un abbonamento MSDN	
+Codice Product Key
+
+Il tuo codice Product Key è disponibile tramite il portale Web del tuo programma.
+
+Acquistando un dispositivo nuovo o ricondizionato che esegue Windows 10	
+Codice Product Key
+
+Il tuo codice Product Key è preinstallato nel dispositivo, riportato all'interno della confezione del dispositivo o incluso come scheda oppure è indicato nel Certificato di autenticità (Certificate of Authenticity o "COA") applicato al dispositivo.
+
+Se hai acquistato un PC ricondizionato, il ricondizionatore, non Microsoft, deve fornire un codice Product Key.
+
+Acquistando su Microsoft Store online	
+Codice Product Key
+
+Trova il tuo codice Product Key nell'e-mail di conferma che contiene la cronologia ordini.
