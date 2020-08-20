@@ -13,3 +13,6 @@ wsl --setdefault Ubuntu-20.04
 wsl --list --all
 wsl --distribution Ubuntu-20.04
 wsl
+
+#disable beep
+echo 'set bell-style none' >> ~/.inputrc
