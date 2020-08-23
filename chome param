@@ -1,1 +1,1 @@
---disable-background-mode --disable-plugins-discovery --dns-prefetch-disable  --incognito --no-experiments --no-pings --purge-memory-button --no-referrers --disable-preconnect
+--disable-background-mode --disable-plugins-discovery --dns-prefetch-disable   --no-experiments --no-pings --purge-memory-button --no-referrers --disable-preconnect
