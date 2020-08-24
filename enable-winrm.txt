@@ -1,0 +1,81 @@
+1 – Abilita Gestione remota Windows
+La prima cosa da fare prima di iniziare a gestire il server in remoto è abilitare questa funzione nel server. A tale scopo, è necessario utilizzare il servizio Gestione remota Windows (WinRM). Gestione remota Windows è il servizio che consente di utilizzare il protocollo WS-Management necessario per la comunicazione remota di PowerShell.
+
+Abilitare Gestione remota Windows è abbastanza semplice da fare, è sufficiente eseguire questo comando in un prompt di PowerShell:
+
+Winrm quickconfig o winrm qc
+
+Dovrebbe visualizzare un messaggio come questo se è già configurato:
+
+
+
+In caso contrario, vi chiederà di configurarlo:
+
+
+
+2 – Abilita PSRemoting
+Dopo aver avviato il servizio Gestione remota Windows, è necessario configurare PowerShell stesso per consentire la comunicazione remota:
+
+Enable-PSRemoting
+
+
+
+3 – Configurazione del file TrustedHosts
+3.1 – Aggiungere il server al file TrustedHosts
+La configurazione precedente implica un ambiente di dominio. Se si lavora con server che non si trovano nel dominio o in un dominio trusted, sarà necessario aggiungerli nell'elenco TrustedHosts del server locale. A tale scopo, è necessario eseguire il comando seguente:
+
+winrm s winrm/config/client ''TrustedHosts'"NomeServer"''
+
+E il risultato che dovresti vedere (devi solo sostituire "MyServerName" con il nome del tuo server):
+
+
+
+Un altro modo per aggiungere un server a questo file, utilizzando il cmdlet Set-Item, come di seguito:
+
+Set-Item WSMan:'localhost'Client'TrustedHosts –Valore "MyServerName,NomeServer2"
+
+
+
+Nel comando sopra si può vedere che ho aggiunto due valori tra le virgolette " ". Se si desidera aggiungere più di un server a questo file, è necessario aggiungerli separati da coma. Attenzione in ogni caso, se un giorno si decide di aggiungere un nuovo server, se si esegue lo stesso comando con un solo nome di server, sovrascriverà il file esistente. È necessario aggiungere tutti i nomi di server che devono essere in questo file.
+
+PowerShell richiederà inoltre di avvisare circa i rischi di aggiunta di un computer che non è affidabile in questo file.
+
+E se faccio un Get-Item, dovrei vedere i miei due server:
+
+Get-Item WSMan:
+
+
+
+Se vuoi fidarti di tutti i server che non sono nel tuo dominio, anche se lontano... lontano dall'essere al sicuro... è possibile utilizzare il carattere jolly, in questo modo:
+
+Set-Item WSMan:
+
+
+
+E il risultato:
+
+Get-Item WSMan:
+
+
+
+E, naturalmente, a volte può anche essere interessante essere in grado di controllare questo file TrustedHosts per vedere cosa c'è dentro. È inoltre possibile utilizzare PowerShell utilizzando il cmdlet Get-Item:
+
+Get-Item WSMan:
+
+3.2 – Rimuovere i server dal file TrustedHosts
+Mentre è possibile aggiungere facilmente server al file TrustedHosts può anche essere interessante essere in grado di rimuovere un server da esso, per motivi di sicurezza, se non è necessario utilizzarlo più.
+
+Per farlo, ci sono due modi diversi...
+
+Cancellare l'intero file, utilizzando il comando seguente:
+
+Clear-Item -Percorso WSMan:
+
+In alternativa, sostituendo un solo valore con un valore vuoto, con il comando seguente:
+
+$newvalue ( ((Get-ChildItem WSMan: Valore). Sostituisci("NomeServer1,","")
+Set-Item WSMan $newvalue:
+
+
+
+E utilizzando questo comando, possiamo rimuovere un server, pur mantenendo gli altri server nell'elenco. Come possiamo vedere sull'output qui sotto:
