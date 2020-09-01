@@ -1,3 +1,4 @@
+if $Primavolta 
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 Invoke-WebRequest -Uri https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi -OutFile WSLUpdate.msi -UseBasicParsing
@@ -11,8 +12,15 @@ List Distributions
 wsl --list --all
 wsl --setdefault Ubuntu-20.04
 wsl --list --all
-wsl --distribution Ubuntu-20.04
-wsl
+ Ubuntu-20.04
+ubuntu2004.exe config --root
 
 #disable beep
 echo 'set bell-style none' >> ~/.inputrc
+
+wsl -- apt-get update
+wsl -- apt-get upgrade
+wsl -- apt-get install -y net-tools
+
+
+
