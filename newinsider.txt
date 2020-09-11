@@ -1,0 +1,101 @@
+siamo entusiasti di rilasciare una nuova build della versione Windows Server vNext Long-Term Servicing Channel (LTSC) che contiene entrambe le opzioni di installazione Desktop Experience e Server Core per le edizioni Datacenter e Standard.
+
+Novità
+CoreNet: percorso dati e trasporti
+MsQuic – un'implementazione open source del protocollo di trasporto QUIC IETF alimenta sia l'elaborazione web HTTP/3 che i trasferimenti di file SMB.
+Miglioramenti delle prestazioni UDP - UDP sta diventando un protocollo molto popolare che trasporta sempre più traffico di rete. Con il protocollo QUIC costruito in cima a UDP e la crescente popolarità di RTP e protocolli di streaming e di gioco personalizzati (UDP) è il momento di portare le prestazioni di UDP ad un livello alla pari con TCP. In Server vNext includiamo il gioco che cambia l'offload di segmentazione UDP (USO). USO sposta la maggior parte del lavoro necessario per inviare pacchetti UDP dalla CPU all'hardware specializzato della scheda NIC. Complimenting USO in Server vNext includiamo UDP Receive Side Coalescing (UDP RSC) che coalisci i pacchetti e riduce l'utilizzo della CPU per l'elaborazione UDP. Per andare avanti con questi due nuovi miglioramenti, abbiamo apportato centinaia di miglioramenti al percorso dati UDP sia trasmettere che ricevere.
+TCP performance improvements — Server vNext uses TCP HyStart++ to reduce packet loss during connection start up (especially in high speed networks) and SendTracker + RACK to reduce Retransmit TimeOuts (RTO). These features are enabled in the transport stack by default and provide a smoother network data flow with better performance at high speeds.
+PktMon support in TCPIP — The cross-component network diagnostics tool for Windows now has TCPIP support providing visibility into the networking stack. PktMon can be used for packet capture, packet drop detection, packet filtering and counting for virtualization scenarios, like container networking and SDN.
+(Improved) RSC in the vSwitch
+RSC in the vSwitch has been improved for better performance. First released in Windows Server 2019, Receive Segment Coalescing (RSC) in the vSwitch enables packets to be coalesced and processed as one larger segment upon entry in the virtual switch. This greatly reduces the CPU cycles consumed processing each byte (Cycles/byte).
+
+However, in its original form, once traffic exited the virtual switch, it would be re-segmented for travel across the VMBus. In Windows Server vNext, segments will remain coalesced across the entire data path until processed by the intended application. This improves two scenarios:
+
+– Traffic from an external host, received by a virtual NIC
+
+– Traffic from a virtual NIC to another virtual NIC on the same host
+
+These improvements to RSC in the vSwitch will be enabled by default; there is noo action required on your part.
+
+Direct Server Return (DSR) load balancing support for Containers and Kubernetes
+DSR is an implementation of asymmetric network load distribution in load balanced systems, meaning that the request and response traffic use a different network path. The use of different network paths helps avoid extra hops and reduces the latency by which not only speeds up the response time between the client and the service but also removes some extra load from the load balancer.
+
+Using DSR is a transparent way to achieve increased network performance for your applications with little to no infrastructure changes. More information
+
+Introducing Virtual Machine (Role) Affinity/AntiAffinity rules with Failover Clustering
+In the past, we have relied on the group property AntiAffinityClassNames to keep roles apart, but there was no site-specific awareness.  If there was a DC that needed to be in one site and a DC that needs to be in another site, it wasn’t guaranteed.  It was also important to remember to type the correct AntiAffinityClassNames string for each role.
+
+There are these PowerShell cmdlets:
+
+New-ClusterAffinityRule = This allows you to create a new Affinity or AntiAffinityrule.  There are four different rule types (-RuleType)
+DifferentFaultDomain = keep the groups on different fault domains
+DifferentNode = keep the groups on different nodes (note could be on different or same fault domain)
+SameFaultDomain = keep the groups on the same fault domain
+SameNode = keep the groups on the same node
+Set-ClusterAffinityRule = This allows you to enable (default) or disable a rule
+Add-ClusterGroupToAffinityRule = Add a group to an existing rule
+Get-ClusterAffinityRule = Display all or specific rules
+Add-ClusterSharedVolumeToAffinityRule = This is for storage Affinity/AntiAffinity where Cluster Shared Volumes can be added to current rules
+Remove-ClusterAffinityRule = Removes a specific rule
+Remove-ClusterGroupFromAffinityRule = Removes a group from a specific rule
+Remove-ClusterSharedVolumeFromAffinityRule = Removes a specific Cluster Shared Volume from a specific rule
+Move-ClusterGroup -IgnoreAffinityRule = This is not a new cmdlet but does allow you to forcibly move a group to a node or fault domain that otherwise would be prevented.  In PowerShell, Cluster Manager, and Windows Admin Center, it would show that the group is in violation as reminder.
+Now you can keep things together or apart.  When moving a role, the affinity object ensures that it can be moved.  The object also looks for other objects and verifies those as well, including disks, so you can have storage affinity with virtual machines (or Roles) and Cluster Shared Volumes (storage affinity) if desired.  You can add roles to multiples such as Domain controllers, for example.  You can set an AntiAffinity rule so that the DCs remain in a different fault domain.  You can then set an affinity rule for each of the DCs to their specific CSV drive so they can stay together.  If you have SQL Server VMs that need to be on each site with a specific DC, you can set an Affinity Rule of same fault domain between each SQL and their respective DC.  Because it is now a cluster object, if you were to try and move a SQL VM from one site to another, it checks all cluster objects associated with it.  It sees there is a pairing with the DC in the same site.  It then sees that the DC has a rule and verifies it.  It sees that the DC cannot be in the same fault domain as the other DC, so the move is disallowed.
+
+There are built-in overrides so that you can force a move when necessary.  You can also easily disable/enable rules if desired, as compared to AntiAffinityClassNames with ClusterEnforcedAffinity where you had to remove the property to get it to move and come up.  We also have added functionality in Drain where if it must move to another domain and there is an AntiAffinity rule preventing it, we will bypass the rule.  Any rule violations are exposed in both Cluster Admin as well as Windows Admin Center for your review.
+
+Flexible BitLocker Protector for Failover Clusters
+BitLocker has been available for Failover Clustering for quite some time. The requirement was the cluster nodes must be all in the same domain as the BitLocker key is tied to the Cluster Name Object (CNO). However, for those clusters at the edge, workgroup clusters, and multidomain clusters, Active Directory may not be present. With no Active Directory, there is no CNO. These cluster scenarios had no data at-rest security. Starting with this Windows Server Insiders, we introduced our own BitLocker key stored locally (encrypted) for cluster to use. This additional key will only be created when the clustered drives are BitLocker protected after cluster creation.
+
+New Cluster Validation network tests
+Networking configurations continue to get more and more complex. A new set of Cluster Validation tests have been added to help validate the configurations are set properly. These tests include:
+
+List Network Metric Order (driver versioning)
+Validate Cluster Network Configuration (virtual switch configuration)
+Validate IP Configuration Warning
+Network Communication Success
+Switch Embedded Teaming Configurations (symmetry, vNIC, pNIC)
+Validate Windows Firewall Configuration Success
+QOS (PFC and ETS) have been configured
+(Note regarding QOS settings above: This does not imply that these settings are valid, simply that settings are implemented. These settings must match your physical network configuration and as such, we cannot validate that these are set to the appropriate values)
+
+Server Core Container images are 20 percent smaller
+In what should be a significant win for any workflow that pulls Windows containers images, the download size of the Windows Server Core container Insider image has been reduced by 20%. This has been achieved by optimizing the set of .NET pre-compiled native images included in the Server Core container image. If you are using .NET Framework with Windows containers, including Windows PowerShell, use a .NET Framework image, which will include additional .NET pre-compiled native images to maintain performance for those scenarios, while also benefitting from a reduced size.
+
+Novità del protocollo SMB
+Alzando ulteriormente la barra di sicurezza, SMB ora supporta la crittografia AES-256. Le prestazioni aumentano anche quando si utilizza la crittografia SMB o la firma con SMB Direct con schede di rete abilitate per RDMA. SMB ora ha anche la capacità di eseguire la compressione per migliorare le prestazioni di rete.
+
+Contenuto disponibile
+Windows Server vNext Long-Term Servicing Channel Preview è disponibile in formato ISO in 18 lingue e in formato VHDX solo in inglese. Le seguenti chiavi consentono attivazioni illimitate:
+Standard: MFY9F-XBN2F-TYFMP-CCV49-RMYVH
+Data center: 2KNJJ-33Y9H-2GXGX-KMQWH-G6H67
+Anteprima semestrale di Windows Server vNext Server Core Datacenter ed Standard Edition sono disponibili nelle 18 lingue server supportate in formato ISO e in formato VHDX solo in inglese. Le seguenti chiavi consentono attivazioni illimitate:
+Standard: V6N4W-86M3X-J77X3-JF6XW-D9PRV
+Data center: B69WH-PRNHK-BXVK3-P9XF7-XD84W
+Anteprima foD di compatibilità delle app di base di Windows Server
+Language Pack del sistema operativo Microsoft Server
+Le chiavi sono valide solo per le build di anteprima. Dopo che l'attivazione per le chiavi di anteprima è disabilitata, è comunque possibile installare e utilizzare le build di anteprima per scopi di sviluppo e test senza eseguire l'attivazione.
+
+I simboli sono disponibili sul server di simboli pubblico: vedere Aggiornamento nel post di blog di Microsoft Symbol Server e Utilizzo del server di simboli Microsoft.
+Contenitori: Per ulteriori informazioni su come ottenere e installare contenitori e build Insider di Windows Server, fare clic qui. Informazioni introduttive, qui.
+Queste anteprime scadono il 31 gennaio 2021.
+
+Come scaricare
+Gli addetti ai lavori registrati possono accedere direttamente alla pagina di download di Windows Server Insider Preview. Vedere l'elenco a discesa Download aggiuntivi per l'interfaccia di amministrazione di Windows e altre app e prodotti aggiuntivi. Se non ti sei ancora registrato come Insider, vedi GETTING STARTED WITH SERVER sul portale Windows Insiders for Business.
+
+Noi valoriamo il tuo feedback!
+La parte più importante di un ciclo di rilascio frequente è quello di ascoltare cosa funziona e cosa deve essere migliorato, in modo che il feedback è estremamente apprezzato. Per Windows Server, usa il dispositivo Windows 10 Insider registrato e usa l'applicazione Hub di Feedback. Nell'app scegliere la categoria Windows Server e quindi la sottocategoria appropriata per il feedback. Nel titolo del Feedback, indica il numero di build che stai fornendo feedback come mostrato di seguito:
+
+[Server : ] Titolo del mio feedback
+
+Per informazioni specifiche, vedere Condividere commenti e suggerimenti su Windows Server tramite Hub di feedback. Ti invitiamo inoltre a visitare lo spazio Windows Server Insiders sul forum Microsoft Tech Communities per collaborare, condividere e imparare da esperti.
+
+Per l'interfaccia di amministrazione di Windows, inviare commenti e suggerimenti tramite UserVoice. Si consiglia inoltre di visitare lo spazio dell'interfaccia di amministrazione di Windows nelle community microsoft microsoft Tech.
+
+Informazioni di diagnostica e utilizzo
+Microsoft raccoglie queste informazioni su Internet per garantire la protezione e l'aggiornamento di Windows, la risoluzione dei problemi e l'aggiornamento dei prodotti. I sistemi operativi server Microsoft possono essere configurati per disattivare i dati di diagnostica, inviare dati di diagnostica obbligatori o inviare dati di diagnostica facoltativi. L'impostazione predefinita consiste nell'inviare i dati di diagnostica obbligatori. I dati di diagnostica necessari includono informazioni che consentono di mantenere il dispositivo sicuro, aggiornato e funzionante come previsto. Durante le anteprime, Microsoft chiede di modificare questa impostazione in Avanzate per fornire il miglior feedback automatico e aiutarci a migliorare il prodotto finale.
+
+Gli amministratori possono modificare il livello di raccolta delle informazioni tramite Impostazioni. Per informazioni dettagliate, vedere http://aka.ms/winserverdata. Vedere anche l'Informativa sulla privacy di Microsoft.
+
+Condizioni d'uso
+Si tratta di software pre-release - viene fornito per l'uso "così come-è" e non è supportato negli ambienti di produzione. Gli utenti sono responsabili dell'installazione di tutti gli aggiornamenti resi disponibili da Windows Update. Tutto il software pre-release reso disponibile tramite il programma Windows Server Insider è regolato dalle Condizioni
