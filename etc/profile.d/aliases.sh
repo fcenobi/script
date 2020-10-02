@@ -63,3 +63,5 @@ export FCRAWBASE="https://raw.githubusercontent.com/fcenobi/"
 export ALIAS_PATH="https://raw.githubusercontent.com/fcenobi/script/master/etc/profile.d/aliases.sh"
 alias updatprofiled='curl -s $ALIAS_PATH > /etc/profile.d/aliases.sh && chmod +777 /etc/profile.d/aliases.sh '
 alias updatealias='/bin/bash < <(curl -s $ALIAS_PATH) '
+
+
