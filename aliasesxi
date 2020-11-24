@@ -26,5 +26,5 @@ alias vmfile='cd /vmfs/volumes/vmfile/ && ll'
 alias netstat='esxcli network ip connection list'
 alias nfsmount='esxcli storage nfs list'
 alias addnfs=' esxcli storage nfs add -H 10.0.0.29 -s /volume2/vmfile -v vmfilenfs'
-showrunvmx=' showrunvm | grep Config| cut -c 17-'
-
+alias showrunvmx=' showrunvm | grep Config| cut -c 17-'
+alias lista-volumi="find  /vmfs/volumes/ -type l  -maxdepth 1"
