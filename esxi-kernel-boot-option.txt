@@ -1,0 +1,36 @@
+BOOTIF=hwtype-MAC
+        address	Simile all'opzione netdevice , tranne nel formato PXELINUX come descritto nell'opzione IPAPPEND sotto SYSLINUX sul sito syslinux.zytor.com.
+gateway=ip address	
+        Imposta questo gateway di rete come gateway predefinito da utilizzare per scaricare lo script di installazione e il supporto di installazione.
+ip=ip address
+        Imposta un indirizzo IP statico da utilizzare per scaricare lo script di installazione e il supporto di installazione. Nota: è supportato anche il formato PXELINUX per questa opzione. Vedere l'opzione IPAPPEND in SYSLINUX sul sito syslinux.zytor.com.
+ks=cdrom:/path
+        Esegue un'installazione tramite script con lo script in path , che risiede sul CD nell'unità CD-ROM. Ogni CDROM viene montato e controllato finché non viene trovato il file che corrisponde al percorso.
+        Importante: Se è stata creata un'immagine ISO del programma di installazione con un'installazione personalizzata o uno script di aggiornamento, è necessario utilizzare caratteri maiuscoli per fornire il percorso dello script, ad esempio ks=cdrom:/KS_CUST.CFG,.
+ks=file://path	
+        Esegue un'installazione tramite script con lo script in path .
+ks=protocol://serverpath	
+        Esegue un'installazione tramite script con uno script situato sulla rete all'URL specificato. protocollo può essere http , https , ftp o nfs . Un esempio che utilizza il protocollo nfs è . Il formato di un URL NFS è specificato in RFC 2224.ks=nfs://host/porturl-path
+ks=usb	
+        Esegue un'installazione tramite script, accedendo allo script da un'unità USB collegata. Cerca un file denominato ks.cfg . Il file deve trovarsi nella directory principale dell'unità. Se sono collegate più unità flash USB, vengono cercate finché non viene trovato il file ks.cfg . Sono supportati solo i file system FAT16 e FAT32.
+
+ks=usb:/path	
+        Esegue un'installazione tramite script con il file di script nel percorso specificato, che risiede su USB.
+ksdevice=device	
+        Tenta di utilizzare un dispositivo adattatore di rete quando cerca uno script di installazione e un supporto di installazione. Specificare come indirizzo MAC, ad esempio, 00: 50: 56: C0: 00: 01. Questa posizione può anche essere un nome vmnicNN. Se non è specificato e i file devono essere recuperati sulla rete, il programma di installazione utilizza per impostazione predefinita la prima scheda di rete rilevata collegata.
+nameserver=ip address	
+        Specifica un server dei nomi di dominio da utilizzare per scaricare lo script di installazione e il supporto di installazione.
+netdevice=device	
+        Tenta di utilizzare un dispositivo adattatore di rete quando cerca uno script di installazione e un supporto di installazione. Specificare come indirizzo MAC, ad esempio, 00: 50: 56: C0: 00: 01. Questa posizione può anche essere un nome vmnicNN. Se non è specificato e i file devono essere recuperati sulla rete, il programma di installazione utilizza per impostazione predefinita la prima scheda di rete rilevata collegata.
+netmask=subnet mask	
+        Specifica la subnet mask per l'interfaccia di rete che scarica lo script di installazione e il supporto di installazione.
+vlanid=vlanid	
+        Configurare la scheda di rete in modo che si trovi sulla VLAN specificata.
+        
+        
+        
+---------------------------------------------------------------------------------------
+
+ks=http://00.00.00.00/kickstart/ks-osdc-pdp101.cfg nameserver=00.00.0.0 ip=00.00.00.000 netmask=255.255.255.0 gateway=00.00.00.000
+
+---------------------------------------------------------------------------------------
