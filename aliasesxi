@@ -30,3 +30,4 @@ alias showrunvmx=' showrunvm | grep Config| cut -c 17-'
 alias lista-volumi="find  /vmfs/volumes/ -type l  -maxdepth 1"
 alias enable-mob="vim-cmd hostsvc/advopt/update Config.HostAgent.plugins.solo.enableMob bool true"
 alias test-mob="vim-cmd hostsvc/advopt/view Config.HostAgent.plugins.solo.enableMob"
+alias fwstatus="esxcli network firewall ruleset list | awk '{print $2"\t"$1  }'| sort"
