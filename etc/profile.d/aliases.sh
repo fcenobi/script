@@ -56,7 +56,7 @@ alias dirtree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-
 alias apachestatus='apache2ctl -SMt -D DUMP_INCLUDES '
 alias lspath='sed 's/:/\n/g' <<< "$PATH"'
 alias updatealiases='curl -s $ALIAS_PATH > ~/.bash_aliases && chmod +777  ~/.bash_aliases '
-
+alias showpath='echo $PATH | tr : "\n"'
 
 export FCGITBASE="https://github.com/fcenobi/"
 export FCRAWBASE="https://raw.githubusercontent.com/fcenobi/"
