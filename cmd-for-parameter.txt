@@ -1,3 +1,7 @@
+from https://superuser.com/questions/653860/list-files-recursively-showing-only-full-path-and-file-size-from-windows-command
+
+
+
 From the "for /?" help text (I used 'a' instead of 'I')
 
 In addition, substitution of FOR variable references has been enhanced.
@@ -30,4 +34,6 @@ The modifiers can be combined to get compound results:
                environment variable for %I and expands to the
                drive letter and path of the first one found.
 %~ftzaI     - expands %I to a DIR like output line
-﻿
+
+
+
