@@ -1,0 +1,7 @@
+Host c3750
+  HostName c3750
+  User root
+  ServerAliveInterval 30
+  ServerAliveCountMax 120
+  KexAlgorithms +diffie-hellman-group1-sha1
+  Ciphers  aes256-cbc
