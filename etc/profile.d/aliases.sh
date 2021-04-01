@@ -64,4 +64,4 @@ export ALIAS_PATH="https://raw.githubusercontent.com/fcenobi/script/master/etc/p
 alias updatprofiled='curl -s $ALIAS_PATH > /etc/profile.d/aliases.sh && chmod +777 /etc/profile.d/aliases.sh '
 alias updatealias='/bin/bash < <(curl -s $ALIAS_PATH) '
 
-alias wan='curl ifconfig.co\/
+alias wan='curl ifconfig.co\/'
