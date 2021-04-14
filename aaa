@@ -1,0 +1,15 @@
+#!/bin/bash
+
+apt-get update 
+apt-get  install  -y \
+network-manager \
+network-manager-gnome \
+openvpn \
+openvpn-systemd-resolved \
+network-manager-openvpn \
+network-manager-openvpn-gnome 
+
+apt-get  -y purge openresolv dhcpcd5 
+ln -sf /lib/systemd/resolv.conf /etc/resolv.conf 
+
+echo Need to reboot !!!!!
