@@ -1,11 +1,11 @@
 alias psfind='ps aux | grep -i '
 alias findf='find . -type f -name '
 alias ffind='find . -type f -ls  '
-alias ls='/bin/ls --color=auto'
-alias la='/bin/ls --color=auto -A'
-alias l='/bin/ls --color=auto -CF'
-alias l.='/bin/ls -d .* --color=auto'
-alias ll='/bin/ls --color=auto -alFhtr'
+alias ls='ls --color=auto'
+alias la='ls  -A'
+alias l='ls -CF'
+alias l.='ls -d .* '
+alias ll='ls -alFhtr'
 
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -64,4 +64,4 @@ export ALIAS_PATH="https://raw.githubusercontent.com/fcenobi/script/master/etc/p
 alias updatprofiled='curl -s $ALIAS_PATH > /etc/profile.d/aliases.sh && chmod +777 /etc/profile.d/aliases.sh '
 alias updatealias='/bin/bash < <(curl -s $ALIAS_PATH) '
 
-alias wan='curl https://ifconfig.co\/'
+alias wan='curl ifconfig.co'
