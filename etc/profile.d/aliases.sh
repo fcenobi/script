@@ -65,3 +65,5 @@ alias updatprofiled='curl -s $ALIAS_PATH > /etc/profile.d/aliases.sh && chmod +7
 alias updatealias='/bin/bash < <(curl -s $ALIAS_PATH) '
 
 alias wan='curl ifconfig.co'
+
+alias catallt
