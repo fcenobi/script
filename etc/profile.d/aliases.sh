@@ -65,5 +65,7 @@ alias updatprofiled='curl -s $ALIAS_PATH > /etc/profile.d/aliases.sh && chmod +7
 alias updatealias='/bin/bash < <(curl -s $ALIAS_PATH) '
 
 alias wan='curl ifconfig.co'
+alias iplist="ip -o addr show up | grep  -e \"inet6 \" -v -e \"lo \" | awk '{print \$2,\$4}' "
+alias gw="ip -o route get 1.1.1.1 |  awk '{print \$5,\$7,\$3}' "
 
-alias catallt
+alias arpscan='arp-scan -lx -I '
