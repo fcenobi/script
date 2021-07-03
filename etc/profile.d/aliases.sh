@@ -69,3 +69,12 @@ alias iplist="ip -o addr show up | grep  -e \"inet6 \" -v -e \"lo \" | awk '{pri
 alias gw="ip -o route get 1.1.1.1 |  awk '{print \$5,\$7,\$3}' "
 
 alias arpscan='arp-scan -lx -I '
+
+function dump_vars {
+    local VARNAME
+    compgen -v | while read -r VARNAME; do
+        printf "$VARNAME=%q\n" "${!VARNAME}"
+    done
+}
+
+
