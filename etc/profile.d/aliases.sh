@@ -76,5 +76,11 @@ function dump_vars {
         printf "$VARNAME=%q\n" "${!VARNAME}"
     done
 }
+alias porte="netstat -nepalot  -4 | awk '{print \$4,\$5,\$6,\$7,\$8,\$9}' | grep -e "\." | column -t "
+alias servizi="netstat -nepalot  -4 | awk '{print \$4,\$9}' | grep -e "\." | column -t "
+
+function scopri {
+    fping -AnN -a -i 1 -r 0 -g -q $0  | column -t
+}
 
 
