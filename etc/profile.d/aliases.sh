@@ -80,7 +80,8 @@ alias porte="netstat -nepalot  -4 | awk '{print \$4,\$5,\$6,\$7,\$8,\$9}' | grep
 alias servizi="netstat -nepalot  -4 | awk '{print \$4,\$9}' | grep -e "\." | column -t "
 
 function scopri {
-    fping -AnN -a -i 1 -r 0 -g -q $0  | column -t
+    subnet=$0
+    fping -4 -An -a -i 1 -r 0 -g -q "${subnet}" | column -t
 }
 
 
