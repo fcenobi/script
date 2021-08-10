@@ -85,4 +85,9 @@ function fscopri {
 }
 alias scopri='fscopri'
 
+function lsroute {
+
+ ip route list  | awk '{print $3 ,$1}' | column -t  | sort 
+
+}
 
