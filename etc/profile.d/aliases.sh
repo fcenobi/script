@@ -91,3 +91,4 @@ function lsroute {
 
 }
 
+export ora=$( date '+%m%d%H%m%S')
