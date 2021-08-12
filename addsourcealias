@@ -1,0 +1,2 @@
+
+echo "curl -s https://raw.githubusercontent.com/fcenobi/script/master/etc/profile.d/aliases.sh > $HOME/.gitalias && source  $HOME/.gitalias" >> /etc/profile
