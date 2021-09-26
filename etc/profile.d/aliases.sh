@@ -93,3 +93,7 @@ function lsroute {
 
 alias ora="date '+%m%d%H%m%S'"
 export ora
+function rmsshhost()
+{
+    sed -i -e  "$1"D  ~/.ssh/known_hosts
+}
