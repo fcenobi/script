@@ -70,6 +70,14 @@ alias gw="ip -o route get 1.1.1.1 |  awk '{print \$5,\$7,\$3}' "
 
 alias arpscan='arp-scan -lx -I '
 
+alias ipaddr='ip -br addr'
+alias iplink='ip -br link'
+alias iproute='ip -br route'
+
+alias hi='history | cut -c 8- | grep -i '
+alias nginxt='nginx -T | grep -v -e "^$\|^.*#"
+
+
 function dump_vars {
     local VARNAME
     compgen -v | while read -r VARNAME; do
