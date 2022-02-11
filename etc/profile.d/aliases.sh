@@ -1,3 +1,7 @@
+export FCGITBASE="https://github.com/fcenobi/"
+export FCRAWBASE="https://raw.githubusercontent.com/fcenobi/"
+export ALIAS_PATH="https://raw.githubusercontent.com/fcenobi/script/master/etc/profile.d/aliases.sh"
+
 alias psfind='ps aux | grep -i '
 alias findf='find . -type f -name '
 alias ffind='find . -type f -ls  '
@@ -49,7 +53,7 @@ alias catalina_base='cd $CATALINA_BASE'
 alias catalina_home='cd $CATALINA_HOME'
 alias lst1='/bin/ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
 alias lst='/bin/ls -R | grep ":$" | sed -e '"'"'s/:$//'"'"' -e '"'"'s/[^-][^\/]*\//--/g'"'"' -e '"'"'s/^/   /'"'"' -e '"'"'s/-/|/'"'"
-alias "ls-mod=ls -al|awk '{k=0;s=0;for(i=0;i<=8;i++){;k+=((substr(\$1,i+2,1)~/[rwxst]/)*2^(8-i));};j=4;for(i=4;i<=10;i+=3){;s+=((substr(\$1,i,1)~/[stST]/)*j);j/=2;};if(k){;printf(\"%0o%0o \",s,k);};print;}'" 
+alias ls-mod="ls -al|awk '{k=0;s=0;for(i=0;i<=8;i++){;k+=((substr(\$1,i+2,1)~/[rwxst]/)*2^(8-i));};j=4;for(i=4;i<=10;i+=3){;s+=((substr(\$1,i,1)~/[stST]/)*j);j/=2;};if(k){;printf(\"%0o%0o \",s,k);};print;}'" 
 alias filetree='find | sed '\''s|[^/]*/|- |g'\'''
 alias filetree1="find | sed 's|[^/]*/|- |g'"
 alias dirtree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
@@ -58,9 +62,6 @@ alias lspath='sed 's/:/\n/g' <<< "$PATH"'
 alias updatealiases='curl -s $ALIAS_PATH > ~/.bash_aliases && chmod +777  ~/.bash_aliases '
 alias showpath='echo $PATH | tr : "\n"'
 
-export FCGITBASE="https://github.com/fcenobi/"
-export FCRAWBASE="https://raw.githubusercontent.com/fcenobi/"
-export ALIAS_PATH="https://raw.githubusercontent.com/fcenobi/script/master/etc/profile.d/aliases.sh"
 alias updatprofiled='curl -s $ALIAS_PATH > /etc/profile.d/aliases.sh && chmod +777 /etc/profile.d/aliases.sh '
 alias updatealias='/bin/bash < <(curl -s $ALIAS_PATH) '
 
@@ -75,7 +76,7 @@ alias iplink='ip -br link'
 alias iproute='ip -br route'
 
 alias hi='history | cut -c 8- | grep -i '
-alias nginxt='nginx -T | grep -v -e "^$\|^.*#"
+alias nginxt='nginx -T | grep -v -e "^$\|^.*#"'
 
 
 function dump_vars {
@@ -88,20 +89,19 @@ alias porte="netstat -nepalot  -4 | awk '{print \$4,\$5,\$6,\$7,\$8,\$9}' | grep
 alias servizi="netstat -nepalot  -4 | awk '{print \$4,\$9}' | grep -e "\." | column -t "
 
 function fscopri {
-    subnet=$0
+    subnet=$1
     fping -4 -An -a -i 1 -r 0 -g -q "${subnet}" | column -t
 }
 alias scopri='fscopri'
 
-function lsroute {
-
+function lsroute { 
  ip route list  | awk '{print $3 ,$1}' | column -t  | sort 
-
-}
+ 
+ }
 
 alias ora="date '+%m%d%H%m%S'"
-export ora
-function rmsshhost()
-{
-    sed -i -e  "$1"D  ~/.ssh/known_hosts
-}
+export ora=$(ora)
+function rmsshhost { 
+    sed -i -e  "$1"D  ~/.ssh/known_hosts 
+    
+    }
