@@ -1,3 +1,7 @@
+sistema=$(uname -s)
+processore=$(uname -m)
+unameraw=$(uname -a)
+
 export FCGITBASE="https://github.com/fcenobi/"
 export FCRAWBASE="https://raw.githubusercontent.com/fcenobi/"
 export ALIAS_PATH="https://raw.githubusercontent.com/fcenobi/script/master/etc/profile.d/aliases.sh"
@@ -5,15 +9,15 @@ export ALIAS_PATH="https://raw.githubusercontent.com/fcenobi/script/master/etc/p
 alias psfind='ps aux | grep -i '
 alias findf='find . -type f -name '
 alias ffind='find . -type f -ls  '
-alias ls='ls --color=auto'
+alias ls='ls --color=always'
 alias la='ls  -A'
 alias l='ls -CF'
 alias l.='ls -d .* '
 alias ll='ls -alFhtr'
 
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
+alias grep='grep --color=always'
+alias egrep='egrep --color=always'
+alias fgrep='fgrep --color=always'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
