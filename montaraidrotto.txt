@@ -1,0 +1,8 @@
+lsblk -l | grep part
+
+
+
+mdadm -A -R -v /dev/md23 /dev/sdb3
+
+mkdir /tmp/md23 
+mount  /dev/md23 /tmp/md23 
