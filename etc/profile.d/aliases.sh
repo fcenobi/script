@@ -75,9 +75,9 @@ alias gw="ip -o route get 1.1.1.1 |  awk '{print \$5,\$7,\$3}' "
 
 alias arpscan='arp-scan -lx -I '
 
-alias ipaddr='ip -br addr'
-alias iplink='ip -br link'
-alias iproute='ip -br route'
+alias ipaddr='ip -c -br addr'
+alias iplink='ip -c -br link'
+alias iproute='ip  -c -br route'
 
 alias hi='history | cut -c 8- | grep -i '
 alias nginxt='nginx -T | grep -v -e "^$\|^.*#"'
