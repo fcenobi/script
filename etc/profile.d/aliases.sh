@@ -109,3 +109,8 @@ function rmsshhost {
     sed -i -e  "$1"D  ~/.ssh/known_hosts 
     
     }
+
+
+function ncdu1 {
+ncdu / --exclude  lost+found  --exclude bin  --exclude sbin   --exclude lib64  --exclude lib32  --exclude lib  --exclude proc  --exclude dev  --exclude  sys  --exclude run
+}
