@@ -1,4 +1,10 @@
-lsblk -l | grep part
+raiddata=$(fdisk -l  | grep -i raid)
+raiddiskpart=$(echo "$raiddata" |  awk '{print $1}' )
+for i in $raiddiskpart ; do findmnt $i ; done
+
+for part in $(lsblk -l | grep part | grep -v -i  swap | awk '{print $1,$7}'  ) ; do   mkdir -p /tmp/mount/$part ; done
+
+
 
 
 
