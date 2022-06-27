@@ -1,0 +1,11 @@
+function awkntoend {
+
+file=$1
+n=$2
+
+echo '$1=$n ; 
+
+awk -v zone="$ZONE" -v day="$DAY" 'BEGIN { print zone, day }'
+cat $1 |  awk '{ $1=$7 ; print $0  }'
+
+}
