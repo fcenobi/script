@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#wget -s https://raw.githubusercontent.com/fcenobi/script/master/etc/skel/.bashrc.git -O ~/.bashrc.git ;   echo " source ~/.bashrc.git  " >>~/.bashrc ; source ~/.bashrc
+#wget -q https://raw.githubusercontent.com/fcenobi/script/master/etc/skel/.bashrc.git -O ~/.bashrc.git ;   echo " source ~/.bashrc.git  " >>~/.bashrc ; source ~/.bashrc
 
 [ -z "$PS1" ] && return
 
