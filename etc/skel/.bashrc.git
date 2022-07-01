@@ -9,8 +9,8 @@ shopt -q -s cmdhist
 shopt -q -s histreedit
 shopt -q -s hostcomplete
 shopt -q -s nocaseglob
-set -o notify            
-set -o ignoreeof         
+#set -o notify            
+#set -o ignoreeof         
 HISTFILE=.bash_history
 HISTFILESIZE=2000
 #HISTTIMEFORMAT="%F "%T" >" 
