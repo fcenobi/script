@@ -13,7 +13,7 @@ shopt -q -s hostcomplete
 shopt -q -s nocaseglob
 #set -o notify            
 #set -o ignoreeof         
-HISTFILE=.bash_history
+HISTFILE=~/.bash_history
 HISTFILESIZE=2000
 #HISTTIMEFORMAT="%F "%T" >" 
 HISTTIMEFORMAT="#%y%m%d%T# "
@@ -88,5 +88,6 @@ fi
 
 
 
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+export HIPROMPT_COMMAND="history -a; history -c; history -r ; "
+
 
