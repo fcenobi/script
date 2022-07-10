@@ -1,6 +1,11 @@
 #!/bin/bash
+umask 0022
+[[   "$(grep   -e  "source ~/.bashrc.git"  ~/.bashrc | cut -d '#' -f1 | grep -v ^$ |  wc -l )" =~ "1" ]]  && echo "load bashrcgit"  || echo " source ~/.bashrc.git  " >>~/.bashrc
 
-#wget -q https://raw.githubusercontent.com/fcenobi/script/master/etc/skel/.bashrc.git -O ~/.bashrc.git ;   echo " source ~/.bashrc.git  " >>~/.bashrc ; source ~/.bashrc
+
+#echo " source ~/.bashrc.git  " >>~/.bashrc ; 
+#wget -q https://raw.githubusercontent.com/fcenobi/script/master/etc/skel/.bashrc.git -O ~/.bashrc.git ; source ~/.bashrc
+
 
 [ -z "$PS1" ] && return
 
@@ -14,12 +19,12 @@ shopt -q -s nocaseglob
 #set -o notify            
 #set -o ignoreeof         
 HISTFILE=~/.bash_history
+HISTSIZE=2000
 HISTFILESIZE=2000
 #HISTTIMEFORMAT="%F "%T" >" 
 HISTTIMEFORMAT="#%y%m%d%T# "
 HISTCONTROL=ignoredups
-HISTSIZE=1000
-HISTFILESIZE=2000
+
 
 
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -68,7 +73,7 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
 if ping -q -c 1 -W 1 google.com >/dev/null; 
 then
         declare -x ALIAS_PATH="https://raw.githubusercontent.com/fcenobi/script/master/etc/profile.d/aliases.sh"
@@ -84,10 +89,6 @@ else
        fi
 fi
 
-
-
-
-
-export HIPROMPT_COMMAND="history -a; history -c; history -r ; "
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 
