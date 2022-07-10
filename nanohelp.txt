@@ -1,0 +1,135 @@
+cmdline option                            
+Option           Long option              Significato
+-A               --smarthome              Abilita chiave casa intelligente
+-B               --backup                 Salva i backup dei file esistenti
+-C <dir>         --backupdir=<dir>        Directory per il salvataggio di file di backup univoci
+-D               --boldtext               Usa il grassetto invece del testo del video inverso
+-E               --tabstospaces           Converti le schede digitate in spazi
+-F               --multibuffer            Legge un file in un nuovo buffer per impostazione predefinita
+-G               --locking                Usa file di blocco (stile vim).
+-I               --ignorercfiles          Non guardare i file nanorc
+-J <number>      --guidestripe=<number>   Mostra una barra guida in questa colonna
+-K               --rawsequences           Risolto il problema di confusione dei tasti del tastierino numerico
+-L               --nonewlines             Non aggiungere una nuova riga automatica
+-M               --trimblanks             Taglia gli spazi di coda durante il confezionamento rigido
+-N               --noconvert              Non convertire file dal formato DOS/Mac
+-O               --bookstyle              Spazio bianco iniziale significa nuovo paragrafo
+-Q <regex>       --quotestr=<regex>       Espressione regolare per abbinare le virgolette
+-R               --restricted             Limita l'accesso al filesystem
+-S               --softwrap               Visualizza righe troppo lunghe su più righe
+-T <number>      --tabsize=<number>       Crea una scheda larga questo numero di colonne
+-U               --quickblank             Cancella la barra di stato alla pressione successiva
+-V               --version                Stampa le informazioni sulla versione ed esci
+-W               --wordbounds             Rileva i confini delle parole in modo più accurato
+-X <string>      --wordchars=<string>     Quali altri caratteri sono parti di parole
+-Z               --zap                    Lascia che Bsp e Del cancellino una regione contrassegnata
+-a               --atblanks               Quando esegui il soft-wrapping, fallo in uno spazio bianco
+-b               --breaklonglines         Avvolgi automaticamente le linee troppo lunghe
+-c               --constantshow           Mostra costantemente la posizione del cursore
+-d               --rebinddelete           Risolto il problema con Backspace/Elimina confusione
+-e               --emptyline              Mantieni vuota la riga sotto la barra del titolo
+-f <file>        --rcfile=<file>          Utilizzare solo questo file per la configurazione di nano
+-g               --showcursor             Mostra il cursore nel browser dei file e il testo della guida
+-h               --help                   Mostra questo testo di aiuto ed esci
+-i               --autoindent             Rientra automaticamente le nuove righe
+-j               --jumpyscrolling         Scorri per metà schermo, non per riga
+-k               --cutfromcursor          Taglia dal cursore alla fine della riga
+-l               --linenumbers            Mostra i numeri di riga davanti al testo
+-n               --noread                 Non leggere il file (scrivilo solo)
+-p               --preserve               Conserva le chiavi XON (^Q) e XOFF (^S).
+-q               --indicator              Mostra un indicatore di posizione+porzione
+-r <number>      --fill=<number>          Imposta la larghezza per avvolgere e giustificare
+-t               --saveonexit             Salva le modifiche all'uscita, non chiedere
+-u               --unix                   Salva un file per impostazione predefinita in formato Unix
+-v               --view                   Modalità di visualizzazione (sola lettura)
+-w               --nowrap                 Non avvolgere le linee lunghe [predefinito]
+-x               --nohelp                 Non mostrare le due linee guida
+-y               --afterends              Fai Ctrl+Destra stop alla fine della parola
+-%               --stateflags             Mostra alcuni stati sulla barra del titolo
+-_               --minibar                Mostra una barra di feedback in basso
+0                --zero                   Nascondi tutte le barre, usa l'intero terminale
+
+
+
+ Il nano editor è progettato per emulare la funzionalità e la facilità d'uso  dell'editor di testo UW Pico. Ci sono quattro sezioni principali dell'editor.
+ La riga superiore mostra la versione del programma, essendo il nome del file corrente  modificato e se il file è stato modificato o meno. Il prossimo è il principale
+ finestra dell'editor che mostra il file in fase di modifica. La riga di stato è la  terza riga dal basso e mostra i messaggi importanti. Gli ultimi due
+ le righe mostrano le scorciatoie più comunemente usate nell'editor. 
+ Le scorciatoie sono scritte come segue: Le sequenze di tasti di controllo sono annotate con  un '^' e può essere immesso utilizzando il tasto Ctrl o premendo il tasto
+ Tasto Esc due volte. Le sequenze di meta-tasti sono annotate con 'M-' e possono esserlo  inserito utilizzando il tasto Alt, Cmd o Esc, a seconda del tuo
+ configurazione della tastiera. Inoltre, premendo Esc due volte e quindi digitando tre cifre  numero decimale da 000 a 255 inserirà il carattere con il
+ valore corrispondente. Le seguenti sequenze di tasti sono disponibili nel main  finestra dell'editor. Le chiavi alternative sono mostrate tra parentesi:"
+
+
+
+^G       (F1)        Visualizza questo testo della guida
+^X       (F2)        Chiudi il buffer corrente / Esci da nano
+^O       (F3)        Scrivi il buffer corrente (o la regione contrassegnata) su disco
+^R       (Ins)       Inserisci un altro file nel buffer corrente (o nel nuovo buffer)
+^W       (F6)        Cerca in avanti una stringa o un'espressione regolare
+^\       (M-R)       Sostituisci una stringa o un'espressione regolare
+^K       (F9)        Taglia la linea corrente (o la regione contrassegnata) e salvala in cutbuffer
+^U       (F10)       Incolla il contenuto di cutbuffer nella posizione corrente del cursore
+^T                   Eseguire una funzione o un comando esterno
+^J       (F4)        Giustifica il paragrafo attuale
+^C       (F11)       Visualizza la posizione del cursore
+^/       (M-G)       Vai al numero di riga e colonna
+M-U                  Annulla l'ultima operazione
+M-E                  Ripeti l'ultima operazione annullata
+M-A      (^6)        Contrassegna il testo a partire dalla posizione del cursore
+M-6      (M-^)       Copia la riga corrente (o la regione contrassegnata) e salvala in cutbuffer
+M-]                  Vai alla parentesi corrispondente
+^Q                   Cerca all'indietro una stringa o un'espressione regolare
+M-Q                  Cerca l'occorrenza successiva all'indietro
+M-W                  Cerca la prossima occorrenza in avanti
+^B       (◂)         Torna indietro di un carattere
+^F       (▸)         Vai avanti di un carattere
+^◂       (M-Space)   Torna indietro di una parola
+^▸       (^Space)    Vai avanti di una parola
+^A       (Home)      Vai all'inizio della riga corrente
+^E       (End)       Vai alla fine della riga corrente
+^P       (▴)         Vai alla riga precedente
+^N       (▾)         Vai alla riga successiva
+M-▴      (M--)       Scorri verso l'alto di una riga senza spostare il cursore testualmente
+M-▾      (M-+)       Scorri verso il basso di una riga senza spostare il cursore testualmente
+^▴       (M-7)       Vai al blocco di testo precedente
+^▾       (M-8)       Vai al blocco di testo successivo
+M-(      (M-9)       "Vai all'inizio del paragrafo              poi del paragrafo precedente"
+M-)      (M-0)       "Vai appena oltre la fine del paragrafo    poi del paragrafo successivo"
+^Y       (PgUp)      Vai di una schermata in su
+^V       (PgDn)      Scendi di una schermata
+M-\      (^Home)     Vai alla prima riga del file
+M-/      (^End)      Vai all'ultima riga del file
+M-◂      (M-<)       Passa al buffer di file precedente
+M-▸      (M->)       Passa al buffer di file successivo
+^I       (Tab)       Inserisci una scheda nella posizione del cursore (o linee contrassegnate da un rientro)
+^M       (Enter)     Inserisci una nuova riga nella posizione del cursore
+^H       (Bsp)       Elimina il carattere a sinistra del cursore
+^Del                 Cancella avanti dal cursore all'inizio della parola successiva
+M-T                  Taglia dalla posizione del cursore alla fine del file
+M-J                  Giustifica l'intero file
+M-D                  Conta il numero di righe, parole e caratteri
+M-V                  Inserisci alla lettera la sequenza di tasti successiva
+                     Sospendi l'editor (ritorna alla shell)
+^L                   Aggiorna (ridisegna) la schermata corrente
+M-}                  Rientra la riga corrente (o le righe contrassegnate)
+M-{      (Sh-Tab)    Annulla il rientro della riga corrente (o delle righe contrassegnate)
+M-:                  Avvia/arresta la registrazione di una macro
+M-                   Eseguire l'ultima macro registrata
+M-Ins                Posiziona o rimuovi un'ancora sulla linea corrente
+M-PgUp               Salta all'indietro fino all'ancora più vicina
+M-PgDn               Salta in avanti verso l'ancora più vicina
+M-Del                Butta via la linea corrente (o la regione contrassegnata)
+^L                   Centrare la riga dove si trova il cursore
+^S                   Salva il file senza chiedere
+M-Z                  Abilita/disabilita interfaccia nascosta
+M-X                  Abilita/disabilita la modalità Guida
+M-C                  Abilita/disabilita la visualizzazione della posizione costante del cursore
+M-S                  Abilita/disabilita l'avvolgimento morbido di linee troppo lunghe
+M-N                  Abilita/disabilita la numerazione delle righe
+M-P                  Abilita/disabilita la visualizzazione degli spazi bianchi
+M-H                  Abilita/disabilita chiave casa intelligente
+M-I                  Abilita/disabilita il rientro automatico
+M-K                  Taglia fino alla fine abilita/disabilita
+M-L                  Abilitazione/disabilitazione dell'avvolgimento rigido di linee troppo lunghe
+M-O                  Conversione delle schede digitate in spazi abilita/disabilita
