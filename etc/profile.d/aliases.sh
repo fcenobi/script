@@ -2,6 +2,14 @@ sistema=$(uname -s)
 processore=$(uname -m)
 unameraw=$(uname -a)
 
+
+[[  $(command -v  opkg ) ]] && alias pkg='opkg'
+[[  $(command -v  ipkg ) ]] && alias pkg='ipkg'
+[[  $(command -v  apt  ) ]] && alias pkg='apt'
+[[  $(command -v  dnf  ) ]] && alias pkg='dnf'
+[[  $(command -v  yum  ) ]] && alias pkg='yum'
+[[  $(command -v  pkg  ) ]] && alias pkg='pkg'
+
 export FCGITBASE="https://github.com/fcenobi/"
 export FCRAWBASE="https://raw.githubusercontent.com/fcenobi/"
 export ALIAS_PATH="https://raw.githubusercontent.com/fcenobi/script/master/etc/profile.d/aliases.sh"
@@ -113,4 +121,14 @@ function rmsshhost {
 
 function ncdu1 {
 ncdu / --exclude  lost+found  --exclude bin  --exclude sbin   --exclude lib64  --exclude lib32  --exclude lib  --exclude proc  --exclude dev  --exclude  sys  --exclude run
+}
+
+
+function pkg {
+[[  $(command -v  opkg ) ]] && alias pkg='opkg'
+[[  $(command -v  ipkg ) ]] && alias pkg='ipkg'
+[[  $(command -v  apt  ) ]] && alias pkg='apt'
+[[  $(command -v  dnf  ) ]] && alias pkg='dnf'
+[[  $(command -v  yum  ) ]] && alias pkg='yum'
+[[  $(command -v  pkg  ) ]] && alias pkg='pkg'
 }
