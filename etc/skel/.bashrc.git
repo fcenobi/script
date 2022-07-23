@@ -90,5 +90,10 @@ else
 fi
 
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
-
+[[  $(command -v  opkg ) ]] && alias pkg='opkg'
+[[  $(command -v  ipkg ) ]] && alias pkg='ipkg'
+[[  $(command -v  apt  ) ]] && alias pkg='apt'
+[[  $(command -v  dnf  ) ]] && alias pkg='dnf'
+[[  $(command -v  yum  ) ]] && alias pkg='yum'
+[[  $(command -v  pkg  ) ]] && alias pkg='pkg'
 
