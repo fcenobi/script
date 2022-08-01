@@ -111,12 +111,12 @@ function lsroute {
  
  }
 
-alias ora="date '+%m%d%H%m%S'"
-export ora=$(ora)
-function rmsshhost { 
-    sed -i -e  "$1"D  ~/.ssh/known_hosts 
-    
-    }
+#alias ora="date '+%m%d%H%m%S'"
+#export ora=$(ora)
+#function rmsshhost { 
+#    sed -i -e  "$1"D  ~/.ssh/known_hosts 
+#    
+#    }
 
 
 function ncdu1 {
