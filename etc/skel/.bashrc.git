@@ -81,6 +81,12 @@ then
     if [ -f ~/.git_alias ]; then
          source  ~/.git_alias
     fi
+    if [ ! -f ~/.sshkeyadd ]; then
+        sshkeyaddurl="https://raw.githubusercontent.com/fcenobi/script/master/etc/skel/sshkeyadd"
+        curl   $sshkeyaddurl >  ~/sshkeyadd  2> /dev/null
+    fi
+
+
 else
      echo "localalias no network"   
        if [ -f ~/.git_alias ];
@@ -89,6 +95,11 @@ else
        fi
 fi
 
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+
+PROMPT_COMMAND=$(echo "$PROMPT_COMMAND" | tr ';' '\n' | sed 's/^ //g' | sed 's/ $//g' | sed 's/^$//g' | sort -u | uniq |  grep -v -e "history " | grep -v ^$ )
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a;history -c;history -r;"
+export PROMPT_COMMAND 
+
 
 
