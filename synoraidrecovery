@@ -1,0 +1,50 @@
+Backup raid config
+------------------
+DiskStation> cd /etc/space
+DiskStation> ls -lh
+DiskStation> cat space_history_20130806_135258.xml
+
+Corrupted system partition
+--------------------------
+DiskStation> cat /proc/mdstat
+md0 : active raid1 sda1[0]
+      2490176 blocks [12/1] [U___________]
+
+md1 : active raid1 sdl2[6] sdk2[5] sdj2[4] sdi2[3] sdh2[2] sdg2[1] sda2[0]
+      2097088 blocks [14/7] [UUUUUUU_______]
+
+md2 : active raid1 sda3[0]
+      53782976 blocks super 1.2 [1/1] [U]
+
+Stop system volumes
+-------------------
+real console mode since it will crash "gate one"
+syno_poweroff_task [dsm 5]
+mdadm --grow -n 1 /dev/md0
+mdadm --grow -n 1 /dev/md1
+mdadm --grow -n 9 /dev/md0
+mdadm --grow -n 9 /dev/md1
+mdadm /dev/md0 -a /dev/sd[ghijklmn]1
+mdadm /dev/md1 -a /dev/sd[ghijklmn]2
+
+
+Degraded raid
+-------------
+http://www.bitgeek.co.uk/recovering-deleted-volumes-synology-diskstation/
+http://superuser.com/questions/603481/how-do-i-reactivate-my-mdadm-raid5-array
+http://superuser.com/questions/550064/how-mount-find-recover-data-in-hdd-outside-of-synology-box
+
+DiskStation> sfdisk -l
+DiskStation> mdadm -E /dev/sd[mn]3
+DiskStation> cat /proc/mdstat
+mdadm --detail /dev/md3
+
+DiskStation> mdadm --stop /dev/md3
+DiskStation> mdadm --assemble --force /dev/md3 /dev/sd[ghijklmn]3
+DiskStation> mdadm --assemble -s
+mdadm: /dev/md/3 has been started with 8 drives.
+mdadm: /dev/md/1_0 has been started with 2 drives (out of 14).
+
+DiskStation> vgchange -ay /dev/vg1
+DiskStation> lvdisplay vg1
+DiskStation> mount /dev/vg1/volume_2 -o ro /volume2
