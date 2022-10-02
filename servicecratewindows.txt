@@ -1,0 +1,159 @@
+sc create  good command parameter samples
+sc create -- binPath= "cmd"
+sc create --console binPath= "c:"
+sc create "<service name>" binpath= "<file path>"
+sc create "ColdFusion 10 NWS Server" binPath= "C:\ColdFusion10\nws\bin\coldfusionsvc.exe" displayname= "ColdFusion 10 NWS Server" start= auto
+sc create "Consul" binPath= "c:\consul.io\consul.exe agent -config-dir c:\consul.io\consul.d\someconfig --ui-dir c:\consul.io\ui" type= share start= auto
+sc create "EmergencyService" binPath= "C:\share\srvc\XYNTService.exe" type= interact type= own start= auto obj= "NT AUTHORITY\LocalService" password= Forget1
+sc create "EmergencyService" binPath= "C:\share\srvc\XYNTService.exe" type= interact type= own start= auto obj= .\Uzver password= Forget1
+sc create "EmergencyService" binPath= "C:\share\srvc\XYNTService.exe" type= interact type= own start= auto obj= MYCOMPUTER1\Uzver password= Forget1
+sc create "EmergencyService" binPath= "C:\share\srvc\XYNTService.exe" type= interact type= own start= auto obj= Uzver password= Forget1
+sc create "FLEXLM" binPath= "C:\flexlm\lmgrd.exe -c C:\flexlm\license.txt
+sc create "IBM Domino Server" binpath= "C:\Lotus\Domino\nservice.exe =C:\Lotus\Domino\notes.ini -jc -c" displayname= "IBM Domino Server"
+sc create "Lotus Domino Server" binPath= "C:\Lotus\Domino\nservice.exe =c:\Lotus\Domino\notes.ini -jc -c"
+sc create "maria55" binpath= "\"C:
+SC CREATE "MicrosoftDynamicsNAVWS
+sc create "Minecraft Server" binpath="C:\ProgramData\Oracle\Java\javapath\java.exe -jar C:\Server\minecraft.jar"
+sc create "moje" binPath= "C:\Program Files\Java\jdk1.6.0_03\jre\bin\java.exe -jar C:\project\ServiceTest.jar"
+sc create "My Sample Service" binPath= C:\SampleService.exe
+sc create "MySQL" binpath= "C:\Archivos de program
+sc create "MySQL" binpath= "C:\Archivos de programa\MySQL\MySQL Server 5.1\bin\mysqld.exe"
+sc create "PItoPI Service Name" binpath= "C: \Program Files\PIPC\Interfaces\PItoPI\pitopi.exe NewID" depend= "tcpip
+sc create "Quest One Identity Manager Service" binPath= "<absolute path>\viNetworkService.exe" start= auto
+sc create "Service Name" binpath= "C: \Progam Files\PIPC\Interfaces\Example\Interface.exe ServiceID" depend= "servicename1
+sc create "solrservice" binPath= "\"C:\Utils\srvany.exe\"" DisplayName= "Solr Server" start= auto
+sc create "Telegraf" binPath= "c:\telegraf\telegraf.exe -config c:\telegraf\telegraf.config" type= share start= auto
+sc create "Vulnerable Service" binPath= "C:\Program Files (x86)\Program Folder\A Subfolder\Executable.exe" start=auto
+sc create "YOURSERVICENAME" binpath= "\"C:\Program Files (x86)\Microsoft SQL Server\MSSQL11\MSSQL\Binn\sqlservr.exe\" -sOPTIONALSWITCH" start= auto
+sc create %ser% binpath= %SelectedFile%  >> Service %ser%.txt
+sc create %ser% binpath= %SelectedFile%
+sc create [service_name] binPath= [service_exe]
+sc create <SERVICE name>
+sc create <servicename> binpath= "<pathtobinaryexecutable>" [option1] [option2] [optionN]
+sc create <ServiceName> binPath=
+SC CREATE AcDebugSvc binPath= "regedit.exe" type= own type= interact
+sc create asperacentral binPath="C:\Program Files\Aspera\Enterprise Server\bin\asperacentral.exe"
+sc create asperacentral
+SC CREATE at Columbia College at twest
+SC CREATE at Columbia College
+sc create BBLEARN-Collab binpath= c:\windows\system32\NewServ.exe
+sc create binPath= "c:
+sc create BITS binpath=
+sc create BITS DisplayName= "Background Intelligent Transfer Service" binpath= "c:\windows\system32\svchost.exe -k netsvcs" Start= delayed-auto depend= EventSystem
+sc create BITS type= share start= delayed-auto binPath=
+sc create BtoEmergencyService binpath= "C:\share\srvc\XYNTService.exe" type= interact type= own start= auto obj= "MyComputer1\uzver" password= "Forget1"
+sc create BtoEmergencyService binpath= "C:\share\srvc\XYNTService.exe" type= interact type= own
+sc create BtoEmergencyService binpath= "C:\share\srvc\XYNTService.exe" type= own start= auto obj= "MyComputer1\uzver" password= "Forget1"
+sc create CmdAsSystem type= own type= interact binPath= "cmd
+sc create CmdAsSystem type= own type= interact binPath=
+sc create CmdSvc binpath= "cmd
+sc create cmdsvc binpath=
+Sc create Command in Windows Server 2008
+sc create Daemon binPath= "C:Program Files (x86)Windows Resource KitsToolssrvany.exe" DisplayName= "Daemon"
+sc create DeltaCopyservice binPath= c:\Deltacopy\DCService.exe DisplayName= "DeltaCopy Server" type= own start= auto obj= "BackupUser"
+sc create DemoService binPath=
+sc create DemoService c:\full\path\to\DemoService.exe
+sc create drdisk type= kernel start= demand binpath= System32\Drivers\drdisk.sys 2>
+sc create drdisk type= kernel start= demand binpath=
+sc create Dropbox binPath= "C:\Program Files (x86)\Windows Resource Kits\Tools\srvany.exe" DisplayName= "Dropbox Service" ]
+sc create DropboxService binPath= C:Program Files (x86)Windows Resource KitsToolssrvany.exe DisplayName= "Dropbox Service"
+sc create DropboxService binPath=
+sc create DropboxSync displayName= "Dropbox Service" start= auto obj= "<domain>\<username>" password= "<password>" binPath= "C:\Program Files (x86)\Dropbox\srvany.exe"
+sc create DynCache binpath= %SystemRoot%\System32\DynCache.exe start= auto type= own DisplayName= "Dynamic Cache Service"
+sc create EndecaServer displayname= "Oracle Endeca Server"
+sc create evil binpath= "cmd.exe
+SC Create example
+sc create GFService binPath= "C:\software\glassfish\lib\appservService.exe \"C:\software\glassfish\bin\asadmin.bat start-domain domain1\" \"C:\software\glassfish\bin\asadmin.bat stop-domain domain1\"" start= auto DisplayName= "GFService"
+sc create gitea start= auto binPath= ""C:\gitea\gitea.exe" web --config "C:\gitea\custom\conf\app.ini""
+sc create GoAgent2 binPath= "\"C:\Program Files (x86)\Go Agent 2\cruisewrapper.exe\" -s \"C:\Program Files (x86)\Go Agent 2\config\wrapper-agent.conf\""
+sc create GoAgent2 binPath= "\"C:\Program Files\Go Agent2\cruisewrapper.exe\" -s \"C:\Program Files\Go Agent2\config\wrapper-agent.conf\""
+sc create gogs start= auto binPath= ""C:\gogs\gogs.exe" web --config "C:\gogs\conf\app.ini""
+sc create gogs start= auto binPath= "\"C:\gogs\gogs.exe\" web --config \"C:\gogs\conf\app.ini\""
+sc create GoogleDriveSync displayName= "Google Drive Service" start= auto obj= "<domain>\<username>" password= "<password>" binPath= "C:\Program Files (x86)\Google\Drive\srvany.exe"
+sc create gpfdist binpath= "path_to_gpfdist.exe -p 8081 -d External\load\files\path -l Log\file\path"
+sc create gpfdistN binpath= "path_to_gpfdist.exe -p 8082 -d External\load\files\path -l Log\file\path"
+sc create imdisk type= kernel start= auto error= ignore binPath= system32\drivers\imdisk.sys
+sc create JenkinsSlave binPath= C:\PathToSlaveHomeDir\jenkins-slave.exe start= auto DisplayName= "Hudson Slave (Jenkins)"
+sc create LNSUSvc binPath= "C:\Program Files\IBM\Lotus\Notes\SUService.exe" type= own type= interact start= auto error= normal displayName= "Lotus Notes Smart Upgrade Service"
+sc create mfaktc_01 binPath= wherever\mfaktc-0.20_01.exe
+sc create mfaktc_02 binPath= wherever\mfaktc-0.20_02.exe
+SC CREATE MicrosoftDynamicsNAVServer
+SC CREATE MicrosoftDynamicsNavServer2009 binpath= "C:\Program Files (x86)\Microsoft Dynamics NAV\60_OLD\NAV 6.0 IN\Service\Microsoft.Dynamics.Nav.Server.exe" start= auto obj= "NT Authority\NetworkService" type= own depend= NetTcpPortSharing
+SC CREATE MicrosoftDynamicsNavServer2009R2 binpath= "C:\Program Files (x86)\Microsoft Dynamics NAV\60_OLD\NAV 6.0 R2 IN\Service\Microsoft.Dynamics.Nav.Server.exe" start= auto obj= "NT Authority\NetworkService" type= own depend= NetTcpPortSharing
+SC CREATE MicrosoftDynamicsNavServer2009SP1 binpath= "C:\Program Files (x86)\Microsoft Dynamics NAV\60_OLD\NAV 6.0 SP1 IN\Service\Microsoft.Dynamics.Nav.Server.exe" start= auto obj= "NT Authority\NetworkService" type= own depend= NetTcpPortSharing
+sc create misfit binPath= wherever\misfit.exe
+sc create MountAsSystem type= own type= interact binPath= "cmd
+sc create Msvcmon binpath= "%binpath%" type= interact type= own
+sc create murmur binPath= "c:\mumble\murmur.exe"
+sc create murmur binPath= "c:\mumble\srvany.exe"
+sc create myDriver type= filesys binpath= C:\myDriver.sys"
+sc create MyProgramName binpath= "C:\MyFolder\MyProgram.exe" type= own start= auto DisplayName= "My Sample Program"
+sc create MyProgramName binpath= "C:\MyFolder\SRVANY.EXE" type= own start= auto DisplayName= "My Sample Program"
+sc create myserv binpath= "tscon 2
+sc create MyService binpath= "\"C:Program Files (x86)My Servicemyservice.exe\"" displayname= "My Service""
+sc create myservice binPath= "\\server\share\MyService.exe" DisplayName= "My service" start= delayed-auto depend= LanmanWorkstation obj= .\MYUSER password= MYPASS
+sc create MyService binPath= "c:\myservice\myservice.exe --port 8080"
+sc create MyService binpath= "C:\Program Files (x86)\My Servicemyservice.exe" displayname= "My Service"
+sc create myService binpath= "MeyService.exe arg1 arg2"
+sc create MyService binPath= C:\Windows\System32\srvany.exe DisplayName= "My Custom Service" )
+SC CREATE MyService binPath=
+sc create MySQL binPath= "%plesk_dir%\\Databases\\MySQL51\\bin\\mysqld.exe \\"--defaults-file=%plesk_dir%\\Databases\\MySQL\\Data\\my.ini\\" MySQL" start= auto
+sc create MySQL start= auto DisplayName= MySQL binPath= c:\program files\mysql\mysql server 5.1\bin\mysqld.exe
+sc create mysqld2 binPath= c:\mysql\bin\mysqld.exe --defaults-file=c:\mysql\my_XX.ini
+sc create mysvcname binpath= mysvcpathname.exe
+sc create MySystemCmdBox binPath= "C:\windows\system32\cmd.exe
+sc create MySystemCmdBox binPath=
+sc create neutron-ovs-agent binPath= "\"C:\Program Files (x86)\Cloudbase Solutions\OpenStack\Nova\bin\OpenStackServiceNeutron.exe\" neutron-hyperv-agent \"C:\Program Files (x86)\Cloudbase Solutions\OpenStack\Nova\Python27\Scripts\neutron-openvswitch-agent.exe\" --config-file \"C:\Program Files (x86)\Cloudbase Solutions\OpenStack\Nova\etc\neutron_ovs_agent.conf\"" type= own start= auto error= ignore depend= Winmgmt displayname= "OpenStack Neutron Open vSwitch Agent Service" obj= LocalSystem
+sc create NewService binpath= c:\abc.exe type= share start= auto depend= "+TDI Netbios"
+sc create NewService binpath=c:\windows\system32\NewServ.exe type=share start=auto depend="+TDI Netbios"
+sc create nginxSvc binPath= "C:\Program Files\nginx-1.3.5\service\srvany.exe" start= auto DisplayName
+sc create Notepad binpath= "%systemroot%NOTEPAD.EXE" type= interact type= own
+sc create notepad binpath= c:\Windows\notepad.exe obj= ".\user" password= "password"
+SC create options:
+SC Create options
+sc create OracleOraDb11g_home1TNSListener [binPath= "C:\oracle\product\11.2.0\dbhome_2\BIN\TNSLSNR.exe"]
+sc create pdfcreator start= auto binPath= "C:\Program Files\oldResourceKitTools\srvany.exe" DisplayName= "PDFCreator" obj= DOMAIN\User password= password
+SC CREATE Plex Displayname= "Plex" binpath= "srvstart.exe Plex -c C:PlexService.ini" start= auto
+sc create PMHADaemon binPath=
+sc create Prime95 binPath= c:\prime95\prime95.exe
+sc create QuasselCore binPath= "C:\Program Files (x86)\Windows Resource Kits\Tools\srvany.exe" DisplayName= "QuasselCore" obj= "NT AUTHORITY\NETWORK SERVICE"
+sc create RabbitMQ binpath= "\"C:\Program Files\erl5.10.4\erts-5.10.4\bin\erlsrv.exe\""
+sc create Redis start= auto DisplayName= Redis binpath= "\"C:\Program Files\Redis\RedisService.exe\" \"C:\Program Files\Redis\redis.conf\""
+sc create RSWebSvc type= own start= auto binpath= c:\Path\To\Exe\WebApp.exe
+sc create sdfs<drive-letter> binPath="\"C:\Program Files\sdfs\mountsdfs.exe\" -v sdfs -m <drive-letter> -cp" DisplayName="SDFS <drive-letter> Drive" start=auto
+sc create sdfss binPath="\"C:\Program Files\sdfs\mountsdfs.exe\" -v sdfs_vol1 -m s -cp" DisplayName="SDFS s Drive" start=auto
+sc create sensu-client start= delayed-auto binPath= c:\opt\sensu\bin\sensu-client.exe DisplayName= "Sensu Client"
+sc create service_name binpath=C:\path\to\binary [option1] [option2] [optionN]
+SC create servicename binpath ="C:\MyWinServices\Test.exe"
+sc create SERVICENAME binpath= "PATHTOSVRANY.EXE" type= own start= auto DisplayName= "DISPLAYNAME"
+sc create ServiceName binPath= "the path"
+sc create servicename binpath=
+sc create ServiceTest binpath= "C:\Windows\System32\cmd.exe
+sc create sesshijack binpath= "cmd.exe
+sc create startSvn binPath= "\"C:\Subversion\bin\svnserve.exe\" --service -r \"C:\SVN_Repository\"" displayname= "MyServer" depend= tcpip start= auto
+sc create SVC binpath= "c:\svc.exe"
+sc create SvcIntCMD binpath= "cmd
+sc create svn binpath= "\"U:\Server\Subversion\bin\svnserve.exe\" --service -r U:\Server\svn" displayname= "Subversion Server" start= auto
+sc create svn binpath= "C:\Progra
+sc create svn_repos binpath= "%ProgramFiles%\Subversion\bin\svnserve.exe --service --root %SubversionRepository" displayname= "Subversion Repository" depend= Tcpip
+sc create svn_repos binpath= "C:\DevSupport\Subversion\bin\svnserve.exe --service --root D:\Repository" displayname= "Subversion Repository" depend= Tcpip
+sc create svn
+sc create svnserve binpath= "\"C:\Program Files (x86)\Subversion\bin\svnserve.exe\" --service --root C:\SVNRoot" displayname= "Subversion" depend= tcpip start= auto obj= "NT AUTHORITY\LocalService"
+sc create svnserve binpath= "\"C:\Program Files\CollabNet Subversion Server\svnserve.exe\" --service -r C:\repositories" displayname= "Subversion Server" depend= Tcpip start= auto
+sc create svnserve binpath= "
+sc create SVNserve binpath= "c:\Program Files\subversion\bin\svnserve.exe --service --root \"c:\svn_root\"" displayname= "Subversion Repository" depend= Tcpip start= auto
+sc create svnserve binpath= "c:\svnserve\svnserve.exe --service
+sc create svnserve binPath=
+sc create svnserve
+sc create SymantecNetworkBootServiceTftp binPath= "C:\Program Files\Altiris\Altiris Agent\Agents\Deployment\SBS\SbsMtftp.exe" DisplayName= "Symantec Network Boot Service (TFTP)"
+sc create syncthing_service binpath= "C:\scripts\syncthing-windows\syncthing.exe" type= own start= auto DisplayName= "SyncThing Service"
+sc create test binPath=
+sc create testdrv binPath= c:\testdrv.sys type= kernel
+sc create testsvc binPath= "C:\WindowsService1.exe"
+sc create VirtualServer binPath= "%SystemRoot%\System32\srvany.exe" start= auto DisplayName= "Virtual Server"
+sc create vmsvc1 binPath= "c:\progra
+sc create webimagemailer binpath= C:\wc\wcmail.exe                                start= auto displayname=
+sc create wuauserv DisplayName= "Windows Update" binpath= "c:\windows\system32\svchost.exe -k netsvcs" Start= delayed-auto depend= RpcSs
+sc create wuauserv DisplayName= "Windows Update" binpath= "c
+sc create XeroxScan binpath="C:\Program
+</tbody></table>
