@@ -97,4 +97,5 @@
 @DOSKEY sudo                   =runas /user:administrator $*
 @DOSKEY list                   =cmd   /v:on /c "for %%p in ( "!path:;=" "!" ) do @echo %%~p"
 @DOSKEY end                    =doskey /history >> %USERPROFILE%\history.txt
+@DOSKEY corto                  =cmd  /v:on  /c "set file=$* & for %A in ( !file! ) do @echo %~sA"
 ::FINEFILE
