@@ -10,6 +10,11 @@
 @DOSKEY allpictures            =cd /d "%SystemDrive%\Users\Public\Pictures"
 @DOSKEY allvideo               =cd /d "%SystemDrive%\Users\Public\Videos"
 @DOSKEY windows                =cd /d "%SystemRoot%"
+@DOSKEY systemp                =cd /d "%SystemRoot%\temp"
+@DOSKEY windowspowershell      =cd /d "%SystemRoot%\System32\WindowsPowerShell\v1.0"
+@DOSKEY pwshbin               =cd /d "%ProgramFiles%\PowerShell\7"
+@DOSKEY pwshmodules            =cd /d "%ProgramFiles%\PowerShell\modules"
+@DOSKEY pwsh7modules           =cd /d "%ProgramFiles%\PowerShell\7modules"
 @DOSKEY fonts                  =cd /d "%SystemRoot%\Fonts"
 @DOSKEY system                 =cd /d "%SystemRoot%\system32"
 @DOSKEY systemx86              =cd /d "%SystemRoot%\SysWOW64"
@@ -35,11 +40,13 @@
 @DOSKEY alltemplates           =cd /d "%ALLUSERSPROFILE%\Microsoft\Windows\Templates"
 :userprofile
 @DOSKEY profile                =cd /d "%USERPROFILE%"
+@DOSKEY home                   =cd /d "%USERPROFILE%"
 @DOSKEY appdata                =cd /d "%USERPROFILE%\AppData\Local"
 @DOSKEY cdburning              =cd /d "%USERPROFILE%\AppData\Local\Microsoft\Windows\Burn\Burn"
-@DOSKEY history                =cd /d "%USERPROFILE%\AppData\Local\Microsoft\Windows\History"
+@DOSKEY mshistory              =cd /d "%USERPROFILE%\AppData\Local\Microsoft\Windows\History"
 @DOSKEY temporaryinternetfiles =cd /d "%USERPROFILE%\AppData\Local\Microsoft\Windows\Temporary Internet Files"
-@DOSKEY temporary              =cd /d "%USERPROFILE%\AppData\Local\Temp\"
+@DOSKEY temp                   =cd /d "%USERPROFILE%\AppData\Local\Temp\"
+@DOSKEY tmp                    =cd /d "%USERPROFILE%\AppData\Local\Temp\"
 @DOSKEY desktop                =cd /d "%USERPROFILE%\Desktop"
 @DOSKEY documents              =cd /d "%USERPROFILE%\Documents"
 @DOSKEY downloads              =cd /d "%USERPROFILE%\Downloads"
@@ -56,9 +63,9 @@
 @DOSKEY pxe                    =cd /d i:\pxe
 @DOSKEY varie                  =cd /d i:\varie
 @DOSKEY web                    =cd /d i:\web
-@DOSKEY downloads              =cd /d i:\downloads
+@DOSKEY downloadsi             =cd /d i:\downloads
 :idocument
-@DOSKEY documents              =cd /d i:\Documents
+@DOSKEY documentsi              =cd /d i:\Documents
 :idocumentpwsh
 @DOSKEY pwshhome               =cd /d i:\Documents\powershell
 @DOSKEY pwshfunc               =cd /d i:\Documents\powershell\function.d
@@ -90,7 +97,7 @@
 @DOSKEY .....                  =cd ..\..\..\..\$*
 @DOSKEY history                =doskey /history
 @DOSKEY kill                   =taskkill /PID $*
-@DOSKEY ls                     =dir $*
+@DOSKEY ll                     =dir $*
 @DOSKEY mv                     =move $*
 @DOSKEY restex                 =taskkill /f /im explorer.exe$T explorer.exe 
 @DOSKEY exphere                =explorer.exe . 
@@ -98,4 +105,9 @@
 @DOSKEY list                   =cmd   /v:on /c "for %%p in ( "!path:;=" "!" ) do @echo %%~p"
 @DOSKEY end                    =doskey /history >> %USERPROFILE%\history.txt
 @DOSKEY corto                  =cmd  /v:on  /c "set file=$* & for %A in ( !file! ) do @echo %~sA"
+@DOSKEY alias                  =doskey /macros $*
+@DOSKEY aliases                =doskey /MACROS:ALL
+@DOSKEY doskey-help            =doskey /?
+
+
 ::FINEFILE
