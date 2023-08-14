@@ -1,0 +1,11 @@
+#!/bin/bash 
+repo='profile.d' ;
+[ -n "$1" ]  && dest="$1" || dest="$(pwd)/$repo"  
+instpkg (){ pkg="$1" ; echo -n "install $pkg " ; apt-get install -y $pkg  >/dev/null  && echo  " OK " || echo "errore apt install $pkg " ;  } ;
+packages=(curl git wget) ;
+echo -n "apt update..." ; apt-get update           >/dev/null  && echo  " OK " || echo "errore apt update" ;
+for pkg in "${packages[@]}" ; do      if ! command $pkg >/dev/null  ;  then  instpkg $pkg  ; fi ;   done  ;
+git clone https://fcenobi:glpat-FBxAuwXNJFvxTCxSJzvw@gitlab.com/fcenobi/profile.d.git  "$dest" ;
+chmod +x "$dest/confige.sh" ; cd $dest ; ./configme.sh && ./configme.sh ;
+
+# gpg --batch --passphrase 'ew286UH.' -c /workspaces/script/kick
